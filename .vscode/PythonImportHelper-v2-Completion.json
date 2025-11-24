@@ -1,0 +1,157 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "Colors",
+        "importPath": "utilities",
+        "description": "utilities",
+        "isExtraImport": true,
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "clear_screen",
+        "importPath": "utilities",
+        "description": "utilities",
+        "isExtraImport": true,
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "coltxt",
+        "importPath": "utilities",
+        "description": "utilities",
+        "isExtraImport": true,
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "Colors",
+        "importPath": "utilities",
+        "description": "utilities",
+        "isExtraImport": true,
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "coltxt",
+        "importPath": "utilities",
+        "description": "utilities",
+        "isExtraImport": true,
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "input_placeholder",
+        "importPath": "utilities",
+        "description": "utilities",
+        "isExtraImport": true,
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "new_file",
+        "importPath": "new_file",
+        "description": "new_file",
+        "isExtraImport": true,
+        "detail": "new_file",
+        "documentation": {}
+    },
+    {
+        "label": "show_menu",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def show_menu():\n    banner =  coltxt(\"\"\"\\n\\n\nTTTTT X   X TTTTT EEEEE DDDD  III TTTTT  OOO  RRRR  \n  T    X X    T   E     D   D  I    T   O   O R   R \n  T     X     T   EEEE  D   D  I    T   O   O RRRR  \n  T    X X    T   E     D   D  I    T   O   O R  R  \n  T   X   X   T   EEEEE DDDD  III   T    OOO  R   R \n                                                    \"\"\", Colors.bold)\n    menu = \"\\n\\nSelect one of the option below: \\n\\t1.Create new file\\n\\t2.Load a file\\n\"                                                                         \n    print(banner)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "menu_input",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def menu_input():\n    option = input(coltxt('txteditor >>> ', Colors.bold))\n    if option not in ['1', '2']:\n        print(coltxt('INCORRECT OPTION CHOOSEN. ', Colors.red_bold) + coltxt('Choose 1 or 2.', Colors.red))\n        menu_input()\n    if option == '1':\n        new_file()\ndef main():\n    clear_screen()\n    show_menu()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def main():\n    clear_screen()\n    show_menu()\n    menu_input()\nif __name__==\"__main__\":\n    main()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "RESET",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "RESET = '\\033[0m'\nBOLD = '\\033[1m'\ndef show_menu():\n    banner =  coltxt(\"\"\"\\n\\n\nTTTTT X   X TTTTT EEEEE DDDD  III TTTTT  OOO  RRRR  \n  T    X X    T   E     D   D  I    T   O   O R   R \n  T     X     T   EEEE  D   D  I    T   O   O RRRR  \n  T    X X    T   E     D   D  I    T   O   O R  R  \n  T   X   X   T   EEEEE DDDD  III   T    OOO  R   R \n                                                    \"\"\", Colors.bold)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "BOLD",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "BOLD = '\\033[1m'\ndef show_menu():\n    banner =  coltxt(\"\"\"\\n\\n\nTTTTT X   X TTTTT EEEEE DDDD  III TTTTT  OOO  RRRR  \n  T    X X    T   E     D   D  I    T   O   O R   R \n  T     X     T   EEEE  D   D  I    T   O   O RRRR  \n  T    X X    T   E     D   D  I    T   O   O R  R  \n  T   X   X   T   EEEEE DDDD  III   T    OOO  R   R \n                                                    \"\"\", Colors.bold)\n    menu = \"\\n\\nSelect one of the option below: \\n\\t1.Create new file\\n\\t2.Load a file\\n\"                                                                         ",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "new_file",
+        "kind": 2,
+        "importPath": "new_file",
+        "description": "new_file",
+        "peekOfCode": "def new_file():\n    input_placeholder(coltxt('txteditor/newfile >>> ', Colors.bold), 'Enter the file name')",
+        "detail": "new_file",
+        "documentation": {}
+    },
+    {
+        "label": "Colors",
+        "kind": 6,
+        "importPath": "utilities",
+        "description": "utilities",
+        "peekOfCode": "class Colors:\n    bold = '\\033[1m'\n    reset= '\\033[0m'\n    red= '\\033[0;31m'\n    red_bold = '\\033[1;31m'\ndef clear_screen():\n    os.system('cls' if os.name == 'nt' else 'clear')\ndef coltxt(txt, col):\n    return col + txt + Colors.reset\ndef input_placeholder(txt: str, placeholder: str):",
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "clear_screen",
+        "kind": 2,
+        "importPath": "utilities",
+        "description": "utilities",
+        "peekOfCode": "def clear_screen():\n    os.system('cls' if os.name == 'nt' else 'clear')\ndef coltxt(txt, col):\n    return col + txt + Colors.reset\ndef input_placeholder(txt: str, placeholder: str):",
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "coltxt",
+        "kind": 2,
+        "importPath": "utilities",
+        "description": "utilities",
+        "peekOfCode": "def coltxt(txt, col):\n    return col + txt + Colors.reset\ndef input_placeholder(txt: str, placeholder: str):",
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "input_placeholder",
+        "kind": 2,
+        "importPath": "utilities",
+        "description": "utilities",
+        "peekOfCode": "def input_placeholder(txt: str, placeholder: str):",
+        "detail": "utilities",
+        "documentation": {}
+    }
+]

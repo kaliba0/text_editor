@@ -1,0 +1,203 @@
+[
+    {
+        "label": "*",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "scrolledtext",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "filedialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "showinfo",
+        "importPath": "tkinter.messagebox",
+        "description": "tkinter.messagebox",
+        "isExtraImport": true,
+        "detail": "tkinter.messagebox",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageTk",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "alert",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def alert():\n    print('pressed button')\nmenubar = Menu(win)\nfileMenu = Menu(menubar, tearoff=0)\nfileMenu.add_command(label=\"New\", command=alert)\nfileMenu.add_command(label=\"Open\", command=alert)\nfileMenu.add_separator()\nfileMenu.add_command(label=\"Quit\", command=win.quit)\nmenubar.add_cascade(label=\"File\", menu=fileMenu)\nhelpMenu = Menu(menubar, tearoff=0)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "win",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "win = Tk()\nwin.title(\"TxtEditor\")\nwin.geometry(\"800x500\")\nwin.resizable(True, True)\nnew_icon = Image.open('assets/new_icon.png').convert('RGBA')\nnew_icon = new_icon.resize((25, 25), Image.Resampling.LANCZOS)\nnew_icon = ImageTk.PhotoImage(new_icon)\nsave_icon = Image.open('assets/save_icon.png').convert('RGBA')\nsave_icon = save_icon.resize((25, 25), Image.Resampling.LANCZOS)\nsave_icon = ImageTk.PhotoImage(save_icon)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "new_icon",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "new_icon = Image.open('assets/new_icon.png').convert('RGBA')\nnew_icon = new_icon.resize((25, 25), Image.Resampling.LANCZOS)\nnew_icon = ImageTk.PhotoImage(new_icon)\nsave_icon = Image.open('assets/save_icon.png').convert('RGBA')\nsave_icon = save_icon.resize((25, 25), Image.Resampling.LANCZOS)\nsave_icon = ImageTk.PhotoImage(save_icon)\n'''def open_file():\n    file_type = \".txt\"\n    file = filedialog.askopenfilename(title = Ouvrir, filetypes = file_type)\n    with open(file) as  ",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "new_icon",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "new_icon = new_icon.resize((25, 25), Image.Resampling.LANCZOS)\nnew_icon = ImageTk.PhotoImage(new_icon)\nsave_icon = Image.open('assets/save_icon.png').convert('RGBA')\nsave_icon = save_icon.resize((25, 25), Image.Resampling.LANCZOS)\nsave_icon = ImageTk.PhotoImage(save_icon)\n'''def open_file():\n    file_type = \".txt\"\n    file = filedialog.askopenfilename(title = Ouvrir, filetypes = file_type)\n    with open(file) as  \n    '''",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "new_icon",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "new_icon = ImageTk.PhotoImage(new_icon)\nsave_icon = Image.open('assets/save_icon.png').convert('RGBA')\nsave_icon = save_icon.resize((25, 25), Image.Resampling.LANCZOS)\nsave_icon = ImageTk.PhotoImage(save_icon)\n'''def open_file():\n    file_type = \".txt\"\n    file = filedialog.askopenfilename(title = Ouvrir, filetypes = file_type)\n    with open(file) as  \n    '''\ndef alert():",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "save_icon",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "save_icon = Image.open('assets/save_icon.png').convert('RGBA')\nsave_icon = save_icon.resize((25, 25), Image.Resampling.LANCZOS)\nsave_icon = ImageTk.PhotoImage(save_icon)\n'''def open_file():\n    file_type = \".txt\"\n    file = filedialog.askopenfilename(title = Ouvrir, filetypes = file_type)\n    with open(file) as  \n    '''\ndef alert():\n    print('pressed button')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "save_icon",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "save_icon = save_icon.resize((25, 25), Image.Resampling.LANCZOS)\nsave_icon = ImageTk.PhotoImage(save_icon)\n'''def open_file():\n    file_type = \".txt\"\n    file = filedialog.askopenfilename(title = Ouvrir, filetypes = file_type)\n    with open(file) as  \n    '''\ndef alert():\n    print('pressed button')\nmenubar = Menu(win)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "save_icon",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "save_icon = ImageTk.PhotoImage(save_icon)\n'''def open_file():\n    file_type = \".txt\"\n    file = filedialog.askopenfilename(title = Ouvrir, filetypes = file_type)\n    with open(file) as  \n    '''\ndef alert():\n    print('pressed button')\nmenubar = Menu(win)\nfileMenu = Menu(menubar, tearoff=0)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "menubar",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "menubar = Menu(win)\nfileMenu = Menu(menubar, tearoff=0)\nfileMenu.add_command(label=\"New\", command=alert)\nfileMenu.add_command(label=\"Open\", command=alert)\nfileMenu.add_separator()\nfileMenu.add_command(label=\"Quit\", command=win.quit)\nmenubar.add_cascade(label=\"File\", menu=fileMenu)\nhelpMenu = Menu(menubar, tearoff=0)\nhelpMenu.add_command(label=\"About\", command=alert)\nmenubar.add_cascade(label=\"Help\", menu=helpMenu)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "fileMenu",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "fileMenu = Menu(menubar, tearoff=0)\nfileMenu.add_command(label=\"New\", command=alert)\nfileMenu.add_command(label=\"Open\", command=alert)\nfileMenu.add_separator()\nfileMenu.add_command(label=\"Quit\", command=win.quit)\nmenubar.add_cascade(label=\"File\", menu=fileMenu)\nhelpMenu = Menu(menubar, tearoff=0)\nhelpMenu.add_command(label=\"About\", command=alert)\nmenubar.add_cascade(label=\"Help\", menu=helpMenu)\nmenuFrame = Frame(win, bg=\"#BABABA\", height=40, highlightthickness=5, highlightbackground=\"#BABABA\", highlightcolor=\"#BABABA\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "helpMenu",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "helpMenu = Menu(menubar, tearoff=0)\nhelpMenu.add_command(label=\"About\", command=alert)\nmenubar.add_cascade(label=\"Help\", menu=helpMenu)\nmenuFrame = Frame(win, bg=\"#BABABA\", height=40, highlightthickness=5, highlightbackground=\"#BABABA\", highlightcolor=\"#BABABA\")\nmenuFrame.pack(side=\"top\", fill=\"x\")\nnew_btn = Label(menuFrame, image=new_icon, bg=\"#fff\")\nnew_btn.pack(side=\"left\", padx=2, pady=2)\nnew_btn.bind(\"<Button-1>\", lambda e: alert())\nsave_btn = Label(menuFrame, image=save_icon, bg=\"#fff\")\nsave_btn.pack(side=\"left\", padx=2, pady=2)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "menuFrame",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "menuFrame = Frame(win, bg=\"#BABABA\", height=40, highlightthickness=5, highlightbackground=\"#BABABA\", highlightcolor=\"#BABABA\")\nmenuFrame.pack(side=\"top\", fill=\"x\")\nnew_btn = Label(menuFrame, image=new_icon, bg=\"#fff\")\nnew_btn.pack(side=\"left\", padx=2, pady=2)\nnew_btn.bind(\"<Button-1>\", lambda e: alert())\nsave_btn = Label(menuFrame, image=save_icon, bg=\"#fff\")\nsave_btn.pack(side=\"left\", padx=2, pady=2)\nsave_btn.bind(\"<Button-1>\", lambda e: alert())\nmainFrame = Frame(win, bg=\"#BABABA\")\nmainFrame.pack(fill = \"both\", expand=True)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "new_btn",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "new_btn = Label(menuFrame, image=new_icon, bg=\"#fff\")\nnew_btn.pack(side=\"left\", padx=2, pady=2)\nnew_btn.bind(\"<Button-1>\", lambda e: alert())\nsave_btn = Label(menuFrame, image=save_icon, bg=\"#fff\")\nsave_btn.pack(side=\"left\", padx=2, pady=2)\nsave_btn.bind(\"<Button-1>\", lambda e: alert())\nmainFrame = Frame(win, bg=\"#BABABA\")\nmainFrame.pack(fill = \"both\", expand=True)\ntext_area = scrolledtext.ScrolledText(mainFrame,\n                                      wrap = WORD,",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "save_btn",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "save_btn = Label(menuFrame, image=save_icon, bg=\"#fff\")\nsave_btn.pack(side=\"left\", padx=2, pady=2)\nsave_btn.bind(\"<Button-1>\", lambda e: alert())\nmainFrame = Frame(win, bg=\"#BABABA\")\nmainFrame.pack(fill = \"both\", expand=True)\ntext_area = scrolledtext.ScrolledText(mainFrame,\n                                      wrap = WORD,\n                                      font=(\"Times New Roman\",\n                                            12))\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=5)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "mainFrame",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "mainFrame = Frame(win, bg=\"#BABABA\")\nmainFrame.pack(fill = \"both\", expand=True)\ntext_area = scrolledtext.ScrolledText(mainFrame,\n                                      wrap = WORD,\n                                      font=(\"Times New Roman\",\n                                            12))\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=5)\nwin.config(menu=menubar)\nwin.tk.call(\"source\", \"assets/azure.tcl\")\nwin.tk.call(\"set_theme\", \"light\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "mainFrame.pack(fill",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "mainFrame.pack(fill = \"both\", expand=True)\ntext_area = scrolledtext.ScrolledText(mainFrame,\n                                      wrap = WORD,\n                                      font=(\"Times New Roman\",\n                                            12))\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=5)\nwin.config(menu=menubar)\nwin.tk.call(\"source\", \"assets/azure.tcl\")\nwin.tk.call(\"set_theme\", \"light\")\nwin.mainloop()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "text_area",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "text_area = scrolledtext.ScrolledText(mainFrame,\n                                      wrap = WORD,\n                                      font=(\"Times New Roman\",\n                                            12))\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=5)\nwin.config(menu=menubar)\nwin.tk.call(\"source\", \"assets/azure.tcl\")\nwin.tk.call(\"set_theme\", \"light\")\nwin.mainloop()",
+        "detail": "main",
+        "documentation": {}
+    }
+]

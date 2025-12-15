@@ -1,5 +1,125 @@
 [
     {
+        "label": "Colors",
+        "importPath": "utilities",
+        "description": "utilities",
+        "isExtraImport": true,
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "clear_screen",
+        "importPath": "utilities",
+        "description": "utilities",
+        "isExtraImport": true,
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "coltxt",
+        "importPath": "utilities",
+        "description": "utilities",
+        "isExtraImport": true,
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "Colors",
+        "importPath": "utilities",
+        "description": "utilities",
+        "isExtraImport": true,
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "coltxt",
+        "importPath": "utilities",
+        "description": "utilities",
+        "isExtraImport": true,
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "input_placeholder",
+        "importPath": "utilities",
+        "description": "utilities",
+        "isExtraImport": true,
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "Colors",
+        "importPath": "utilities",
+        "description": "utilities",
+        "isExtraImport": true,
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "clear_screen",
+        "importPath": "utilities",
+        "description": "utilities",
+        "isExtraImport": true,
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "coltxt",
+        "importPath": "utilities",
+        "description": "utilities",
+        "isExtraImport": true,
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "Colors",
+        "importPath": "utilities",
+        "description": "utilities",
+        "isExtraImport": true,
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "coltxt",
+        "importPath": "utilities",
+        "description": "utilities",
+        "isExtraImport": true,
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "input_placeholder",
+        "importPath": "utilities",
+        "description": "utilities",
+        "isExtraImport": true,
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "PromptSession",
+        "importPath": "prompt_toolkit",
+        "description": "prompt_toolkit",
+        "isExtraImport": true,
+        "detail": "prompt_toolkit",
+        "documentation": {}
+    },
+    {
+        "label": "Document",
+        "importPath": "prompt_toolkit.document",
+        "description": "prompt_toolkit.document",
+        "isExtraImport": true,
+        "detail": "prompt_toolkit.document",
+        "documentation": {}
+    },
+    {
+        "label": "KeyBindings",
+        "importPath": "prompt_toolkit.key_binding",
+        "description": "prompt_toolkit.key_binding",
+        "isExtraImport": true,
+        "detail": "prompt_toolkit.key_binding",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -9,51 +129,20 @@
         "documentation": {}
     },
     {
-        "label": "Colors",
-        "importPath": "utilities",
-        "description": "utilities",
+        "label": "pathlib",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "utilities",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "detail": "pathlib",
         "documentation": {}
     },
     {
-        "label": "clear_screen",
-        "importPath": "utilities",
-        "description": "utilities",
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
         "isExtraImport": true,
-        "detail": "utilities",
-        "documentation": {}
-    },
-    {
-        "label": "coltxt",
-        "importPath": "utilities",
-        "description": "utilities",
-        "isExtraImport": true,
-        "detail": "utilities",
-        "documentation": {}
-    },
-    {
-        "label": "Colors",
-        "importPath": "utilities",
-        "description": "utilities",
-        "isExtraImport": true,
-        "detail": "utilities",
-        "documentation": {}
-    },
-    {
-        "label": "coltxt",
-        "importPath": "utilities",
-        "description": "utilities",
-        "isExtraImport": true,
-        "detail": "utilities",
-        "documentation": {}
-    },
-    {
-        "label": "input_placeholder",
-        "importPath": "utilities",
-        "description": "utilities",
-        "isExtraImport": true,
-        "detail": "utilities",
+        "detail": "pathlib",
         "documentation": {}
     },
     {
@@ -62,96 +151,530 @@
         "description": "new_file",
         "isExtraImport": true,
         "detail": "new_file",
+        "documentation": {}
+    },
+    {
+        "label": "load_file",
+        "importPath": "load_file",
+        "description": "load_file",
+        "isExtraImport": true,
+        "detail": "load_file",
+        "documentation": {}
+    },
+    {
+        "label": "editor",
+        "importPath": "editor",
+        "description": "editor",
+        "isExtraImport": true,
+        "detail": "editor",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "tkinter",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "scrolledtext",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "filedialog",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "messagebox",
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "isExtraImport": true,
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageTk",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "editor",
+        "kind": 2,
+        "importPath": "term.editor",
+        "description": "term.editor",
+        "peekOfCode": "def editor(txtfile: str):\n    clear_screen()\n    path = f\"files/{txtfile}.txt\"\n    try:\n        with open(path, 'r', encoding='utf-8') as f:\n            initial_text = f.read()\n    except FileNotFoundError:\n        initial_text = \"\"\n    print(coltxt(f\"Editing {txtfile}.txt (Ctrl+T = commands, Ctrl+Q = save and quit)\\n\",\n                 Colors.grey))",
+        "detail": "term.editor",
+        "documentation": {}
+    },
+    {
+        "label": "load_file",
+        "kind": 2,
+        "importPath": "term.load_file",
+        "description": "term.load_file",
+        "peekOfCode": "def load_file():\n    p = pathlib.Path('../files')\n    liste_fichier = os.listdir(p)\n    n = 0\n    options = []\n    for i in range(len(liste_fichier)) :\n        n += 1\n        options.append(n)\n        print(f\"\\t {n}.{liste_fichier[i]}\")\n    reponse = \"\"",
+        "detail": "term.load_file",
+        "documentation": {}
+    },
+    {
+        "label": "validite_entree",
+        "kind": 2,
+        "importPath": "term.load_file",
+        "description": "term.load_file",
+        "peekOfCode": "def validite_entree(reponse, options) :\n    critere = True\n    if reponse == \"\" :\n        return False\n    try :\n        reponse = int(reponse)\n    except :\n        print(coltxt('INCORRECT OPTION CHOOSEN. ', Colors.red_bold) + coltxt('Choose a number.', Colors.red))\n        critere = False\n    else :",
+        "detail": "term.load_file",
         "documentation": {}
     },
     {
         "label": "show_menu",
         "kind": 2,
-        "importPath": "main",
-        "description": "main",
+        "importPath": "term.main",
+        "description": "term.main",
         "peekOfCode": "def show_menu():\n    banner =  coltxt(\"\"\"\\n\\n\nTTTTT X   X TTTTT EEEEE DDDD  III TTTTT  OOO  RRRR  \n  T    X X    T   E     D   D  I    T   O   O R   R \n  T     X     T   EEEE  D   D  I    T   O   O RRRR  \n  T    X X    T   E     D   D  I    T   O   O R  R  \n  T   X   X   T   EEEEE DDDD  III   T    OOO  R   R \n                                                    \"\"\", Colors.bold)\n    menu = \"\\n\\nSelect one of the option below: \\n\\t1.Create new file\\n\\t2.Load a file\\n\"                                                                         \n    print(banner)",
-        "detail": "main",
+        "detail": "term.main",
         "documentation": {}
     },
     {
         "label": "menu_input",
         "kind": 2,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "def menu_input():\n    option = input(coltxt('txteditor >>> ', Colors.bold))\n    if option not in ['1', '2']:\n        print(coltxt('INCORRECT OPTION CHOOSEN. ', Colors.red_bold) + coltxt('Choose 1 or 2.', Colors.red))\n        menu_input()\n    if option == '1':\n        new_file()\ndef main():\n    clear_screen()\n    show_menu()",
-        "detail": "main",
+        "importPath": "term.main",
+        "description": "term.main",
+        "peekOfCode": "def menu_input():\n    try:\n        option = input(coltxt('txteditor >>> ', Colors.bold))\n    except (KeyboardInterrupt, EOFError):\n        print()\n        sys.exit(0)\n    if option not in ['1', '2']:\n        print(coltxt('INCORRECT OPTION CHOOSEN. ', Colors.red_bold) + coltxt('Choose 1 or 2.', Colors.red))\n        menu_input()\n    if option == '1':",
+        "detail": "term.main",
         "documentation": {}
     },
     {
         "label": "main",
         "kind": 2,
-        "importPath": "main",
-        "description": "main",
+        "importPath": "term.main",
+        "description": "term.main",
         "peekOfCode": "def main():\n    clear_screen()\n    show_menu()\n    menu_input()\nif __name__==\"__main__\":\n    main()",
-        "detail": "main",
+        "detail": "term.main",
         "documentation": {}
     },
     {
         "label": "RESET",
         "kind": 5,
-        "importPath": "main",
-        "description": "main",
+        "importPath": "term.main",
+        "description": "term.main",
         "peekOfCode": "RESET = '\\033[0m'\nBOLD = '\\033[1m'\ndef show_menu():\n    banner =  coltxt(\"\"\"\\n\\n\nTTTTT X   X TTTTT EEEEE DDDD  III TTTTT  OOO  RRRR  \n  T    X X    T   E     D   D  I    T   O   O R   R \n  T     X     T   EEEE  D   D  I    T   O   O RRRR  \n  T    X X    T   E     D   D  I    T   O   O R  R  \n  T   X   X   T   EEEEE DDDD  III   T    OOO  R   R \n                                                    \"\"\", Colors.bold)",
-        "detail": "main",
+        "detail": "term.main",
         "documentation": {}
     },
     {
         "label": "BOLD",
         "kind": 5,
-        "importPath": "main",
-        "description": "main",
+        "importPath": "term.main",
+        "description": "term.main",
         "peekOfCode": "BOLD = '\\033[1m'\ndef show_menu():\n    banner =  coltxt(\"\"\"\\n\\n\nTTTTT X   X TTTTT EEEEE DDDD  III TTTTT  OOO  RRRR  \n  T    X X    T   E     D   D  I    T   O   O R   R \n  T     X     T   EEEE  D   D  I    T   O   O RRRR  \n  T    X X    T   E     D   D  I    T   O   O R  R  \n  T   X   X   T   EEEEE DDDD  III   T    OOO  R   R \n                                                    \"\"\", Colors.bold)\n    menu = \"\\n\\nSelect one of the option below: \\n\\t1.Create new file\\n\\t2.Load a file\\n\"                                                                         ",
-        "detail": "main",
+        "detail": "term.main",
         "documentation": {}
     },
     {
         "label": "new_file",
         "kind": 2,
-        "importPath": "new_file",
-        "description": "new_file",
-        "peekOfCode": "def new_file():\n    input_placeholder(coltxt('txteditor/newfile >>> ', Colors.bold), 'Enter the file name')",
-        "detail": "new_file",
+        "importPath": "term.new_file",
+        "description": "term.new_file",
+        "peekOfCode": "def new_file():\n    name = input(coltxt('txteditor/newfile ', Colors.bold)+ coltxt('(name your new file) ') + coltxt('>>> ', Colors.bold))\n    while True:\n        if name==\"\":\n            name = input(coltxt('txteditor/newfile ', Colors.bold)+ coltxt('(name your new file) ') + coltxt('>>> ', Colors.bold))\n        else :\n            break\n    dir_list = os.listdir(\"../files\")\n    if f\"{name}.txt\" in dir_list:\n        opt = input(coltxt('Existing file with this name found. Overwrite ? ', Colors.red_bold) + coltxt('(y/n) ', Colors.red))",
+        "detail": "term.new_file",
+        "documentation": {}
+    },
+    {
+        "label": "Pile",
+        "kind": 6,
+        "importPath": "term.undo_redo",
+        "description": "term.undo_redo",
+        "peekOfCode": "class Pile:\n\tdef __init__(self):\n\t\tself.valeurs = []\n\tdef empiler(self, valeur):\n\t\tself.valeurs.append(valeur)\n\tdef depiler(self):\n\t\tif self.valeurs:\n\t\t\treturn self.valeurs.pop()\n\tdef estVide(self):\n\t\treturn self.valeurs == []",
+        "detail": "term.undo_redo",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tself.valeurs",
+        "kind": 5,
+        "importPath": "term.undo_redo",
+        "description": "term.undo_redo",
+        "peekOfCode": "\t\tself.valeurs = []\n\tdef empiler(self, valeur):\n\t\tself.valeurs.append(valeur)\n\tdef depiler(self):\n\t\tif self.valeurs:\n\t\t\treturn self.valeurs.pop()\n\tdef estVide(self):\n\t\treturn self.valeurs == []",
+        "detail": "term.undo_redo",
         "documentation": {}
     },
     {
         "label": "Colors",
         "kind": 6,
-        "importPath": "utilities",
-        "description": "utilities",
-        "peekOfCode": "class Colors:\n    bold = '\\033[1m'\n    reset= '\\033[0m'\n    red= '\\033[0;31m'\n    red_bold = '\\033[1;31m'\ndef clear_screen():\n    os.system('cls' if os.name == 'nt' else 'clear')\ndef coltxt(txt, col):\n    return col + txt + Colors.reset\ndef input_placeholder(txt: str, placeholder: str):",
-        "detail": "utilities",
+        "importPath": "term.utilities",
+        "description": "term.utilities",
+        "peekOfCode": "class Colors:\n    bold = '\\033[1m'\n    reset= '\\033[0m'\n    red= '\\033[0;31m'\n    red_bold = '\\033[1;31m'\n    grey=\"\\033[38;2;160;160;160m\"\ndef clear_screen():\n    os.system('cls' if os.name == 'nt' else 'clear')\nclass ColoredTxt:\n    def __init__(self, text, color=Colors.reset):",
+        "detail": "term.utilities",
+        "documentation": {}
+    },
+    {
+        "label": "ColoredTxt",
+        "kind": 6,
+        "importPath": "term.utilities",
+        "description": "term.utilities",
+        "peekOfCode": "class ColoredTxt:\n    def __init__(self, text, color=Colors.reset):\n        self.content = color + text + Colors.reset\n    def __str__(self):\n        return self.content\ndef coltxt(txt, col= Colors.reset):\n    return col + txt + Colors.reset\ndef input_placeholder(txt: str, placeholder: str):\n    raise NotImplementedError",
+        "detail": "term.utilities",
         "documentation": {}
     },
     {
         "label": "clear_screen",
         "kind": 2,
-        "importPath": "utilities",
-        "description": "utilities",
-        "peekOfCode": "def clear_screen():\n    os.system('cls' if os.name == 'nt' else 'clear')\ndef coltxt(txt, col):\n    return col + txt + Colors.reset\ndef input_placeholder(txt: str, placeholder: str):",
-        "detail": "utilities",
+        "importPath": "term.utilities",
+        "description": "term.utilities",
+        "peekOfCode": "def clear_screen():\n    os.system('cls' if os.name == 'nt' else 'clear')\nclass ColoredTxt:\n    def __init__(self, text, color=Colors.reset):\n        self.content = color + text + Colors.reset\n    def __str__(self):\n        return self.content\ndef coltxt(txt, col= Colors.reset):\n    return col + txt + Colors.reset\ndef input_placeholder(txt: str, placeholder: str):",
+        "detail": "term.utilities",
         "documentation": {}
     },
     {
         "label": "coltxt",
         "kind": 2,
-        "importPath": "utilities",
-        "description": "utilities",
-        "peekOfCode": "def coltxt(txt, col):\n    return col + txt + Colors.reset\ndef input_placeholder(txt: str, placeholder: str):",
-        "detail": "utilities",
+        "importPath": "term.utilities",
+        "description": "term.utilities",
+        "peekOfCode": "def coltxt(txt, col= Colors.reset):\n    return col + txt + Colors.reset\ndef input_placeholder(txt: str, placeholder: str):\n    raise NotImplementedError",
+        "detail": "term.utilities",
         "documentation": {}
     },
     {
         "label": "input_placeholder",
         "kind": 2,
-        "importPath": "utilities",
-        "description": "utilities",
-        "peekOfCode": "def input_placeholder(txt: str, placeholder: str):",
-        "detail": "utilities",
+        "importPath": "term.utilities",
+        "description": "term.utilities",
+        "peekOfCode": "def input_placeholder(txt: str, placeholder: str):\n    raise NotImplementedError",
+        "detail": "term.utilities",
+        "documentation": {}
+    },
+    {
+        "label": "open_file",
+        "kind": 2,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "def open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]\n    file_name = tk.filedialog.askopenfilename(title = \"Open\", filetypes = file_type)\n    global current_file_path \n    current_file_path = file_name\n    print(current_file_path)\n    if len(file_name) < 1 :\n        tk.messagebox.showwarning(title = \"Ooops\",message = \"Please choose another file\")\n    text_area.delete(1.0, \"end\")\n    with open(file_name) as file :",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "new_file",
+        "kind": 2,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "def new_file(event = None):\n    file_name = tk.filedialog.asksaveasfilename(title = \"New\", confirmoverwrite = True, defaultextension = '.txt')\n    global current_file_path\n    current_file_path = file_name\n    if file_name == None :\n        tk.messagebox.showwarning(title = \"Ooops\",message = \"Try again\")\n    open(file_name, \"x\")\n    print(current_file_path)\ndef save(event = None):\n    current_txt = text_area.get(1.0, \"end\")",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "save",
+        "kind": 2,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "def save(event = None):\n    current_txt = text_area.get(1.0, \"end\")\n    with open(current_file_path, \"w\") as file :\n        file.write(current_txt)\n    messagebox.showinfo(title=\"Your file have been saved\", message=current_file_path, icon='info')\ndef alert():\n    messagebox.showinfo('Alert', 'bouton')\nmenubar = tk.Menu(win)\nfileMenu = tk.Menu(menubar, tearoff=0)\nfileMenu.add_command(label=\"New\", command=new_file)",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "alert",
+        "kind": 2,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "def alert():\n    messagebox.showinfo('Alert', 'bouton')\nmenubar = tk.Menu(win)\nfileMenu = tk.Menu(menubar, tearoff=0)\nfileMenu.add_command(label=\"New\", command=new_file)\nfileMenu.add_command(label=\"Open\", command=open_file)\nfileMenu.add_separator()\nfileMenu.add_command(label=\"Quit\", command=win.quit)\nmenubar.add_cascade(label=\"File\", menu=fileMenu)\nhelpMenu = tk.Menu(menubar, tearoff=0)",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "win",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "win = tk.Tk()\nwin.title(\"TxtEditor\")\nwin.geometry(\"800x500\")\nwin.resizable(True, True)\ncurrent_file_path = \"\"\n# Get the directory where this script is located\nscript_dir = Path(__file__).parent\nnew_icon = Image.open(script_dir / 'assets/new_icon.png').convert('RGBA')\nnew_icon = new_icon.resize((25, 25), Image.Resampling.LANCZOS)\nnew_icon = ImageTk.PhotoImage(new_icon)",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "current_file_path",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "current_file_path = \"\"\n# Get the directory where this script is located\nscript_dir = Path(__file__).parent\nnew_icon = Image.open(script_dir / 'assets/new_icon.png').convert('RGBA')\nnew_icon = new_icon.resize((25, 25), Image.Resampling.LANCZOS)\nnew_icon = ImageTk.PhotoImage(new_icon)\nsave_icon = Image.open(script_dir / 'assets/save_icon.png').convert('RGBA')\nsave_icon = save_icon.resize((25, 25), Image.Resampling.LANCZOS)\nsave_icon = ImageTk.PhotoImage(save_icon)\nback_icon = Image.open(script_dir / 'assets/play-back-outline.png').convert('RGBA')",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "script_dir",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "script_dir = Path(__file__).parent\nnew_icon = Image.open(script_dir / 'assets/new_icon.png').convert('RGBA')\nnew_icon = new_icon.resize((25, 25), Image.Resampling.LANCZOS)\nnew_icon = ImageTk.PhotoImage(new_icon)\nsave_icon = Image.open(script_dir / 'assets/save_icon.png').convert('RGBA')\nsave_icon = save_icon.resize((25, 25), Image.Resampling.LANCZOS)\nsave_icon = ImageTk.PhotoImage(save_icon)\nback_icon = Image.open(script_dir / 'assets/play-back-outline.png').convert('RGBA')\nback_icon = back_icon.resize((25, 25), Image.Resampling.LANCZOS)\nback_icon = ImageTk.PhotoImage(back_icon)",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "new_icon",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "new_icon = Image.open(script_dir / 'assets/new_icon.png').convert('RGBA')\nnew_icon = new_icon.resize((25, 25), Image.Resampling.LANCZOS)\nnew_icon = ImageTk.PhotoImage(new_icon)\nsave_icon = Image.open(script_dir / 'assets/save_icon.png').convert('RGBA')\nsave_icon = save_icon.resize((25, 25), Image.Resampling.LANCZOS)\nsave_icon = ImageTk.PhotoImage(save_icon)\nback_icon = Image.open(script_dir / 'assets/play-back-outline.png').convert('RGBA')\nback_icon = back_icon.resize((25, 25), Image.Resampling.LANCZOS)\nback_icon = ImageTk.PhotoImage(back_icon)\nforward_icon = Image.open(script_dir / 'assets/play-forward-outline.png').convert('RGBA')",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "new_icon",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "new_icon = new_icon.resize((25, 25), Image.Resampling.LANCZOS)\nnew_icon = ImageTk.PhotoImage(new_icon)\nsave_icon = Image.open(script_dir / 'assets/save_icon.png').convert('RGBA')\nsave_icon = save_icon.resize((25, 25), Image.Resampling.LANCZOS)\nsave_icon = ImageTk.PhotoImage(save_icon)\nback_icon = Image.open(script_dir / 'assets/play-back-outline.png').convert('RGBA')\nback_icon = back_icon.resize((25, 25), Image.Resampling.LANCZOS)\nback_icon = ImageTk.PhotoImage(back_icon)\nforward_icon = Image.open(script_dir / 'assets/play-forward-outline.png').convert('RGBA')\nforward_icon = forward_icon.resize((25, 25), Image.Resampling.LANCZOS)",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "new_icon",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "new_icon = ImageTk.PhotoImage(new_icon)\nsave_icon = Image.open(script_dir / 'assets/save_icon.png').convert('RGBA')\nsave_icon = save_icon.resize((25, 25), Image.Resampling.LANCZOS)\nsave_icon = ImageTk.PhotoImage(save_icon)\nback_icon = Image.open(script_dir / 'assets/play-back-outline.png').convert('RGBA')\nback_icon = back_icon.resize((25, 25), Image.Resampling.LANCZOS)\nback_icon = ImageTk.PhotoImage(back_icon)\nforward_icon = Image.open(script_dir / 'assets/play-forward-outline.png').convert('RGBA')\nforward_icon = forward_icon.resize((25, 25), Image.Resampling.LANCZOS)\nforward_icon = ImageTk.PhotoImage(forward_icon)",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "save_icon",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "save_icon = Image.open(script_dir / 'assets/save_icon.png').convert('RGBA')\nsave_icon = save_icon.resize((25, 25), Image.Resampling.LANCZOS)\nsave_icon = ImageTk.PhotoImage(save_icon)\nback_icon = Image.open(script_dir / 'assets/play-back-outline.png').convert('RGBA')\nback_icon = back_icon.resize((25, 25), Image.Resampling.LANCZOS)\nback_icon = ImageTk.PhotoImage(back_icon)\nforward_icon = Image.open(script_dir / 'assets/play-forward-outline.png').convert('RGBA')\nforward_icon = forward_icon.resize((25, 25), Image.Resampling.LANCZOS)\nforward_icon = ImageTk.PhotoImage(forward_icon)\nopen_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "save_icon",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "save_icon = save_icon.resize((25, 25), Image.Resampling.LANCZOS)\nsave_icon = ImageTk.PhotoImage(save_icon)\nback_icon = Image.open(script_dir / 'assets/play-back-outline.png').convert('RGBA')\nback_icon = back_icon.resize((25, 25), Image.Resampling.LANCZOS)\nback_icon = ImageTk.PhotoImage(back_icon)\nforward_icon = Image.open(script_dir / 'assets/play-forward-outline.png').convert('RGBA')\nforward_icon = forward_icon.resize((25, 25), Image.Resampling.LANCZOS)\nforward_icon = ImageTk.PhotoImage(forward_icon)\nopen_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "save_icon",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "save_icon = ImageTk.PhotoImage(save_icon)\nback_icon = Image.open(script_dir / 'assets/play-back-outline.png').convert('RGBA')\nback_icon = back_icon.resize((25, 25), Image.Resampling.LANCZOS)\nback_icon = ImageTk.PhotoImage(back_icon)\nforward_icon = Image.open(script_dir / 'assets/play-forward-outline.png').convert('RGBA')\nforward_icon = forward_icon.resize((25, 25), Image.Resampling.LANCZOS)\nforward_icon = ImageTk.PhotoImage(forward_icon)\nopen_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "back_icon",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "back_icon = Image.open(script_dir / 'assets/play-back-outline.png').convert('RGBA')\nback_icon = back_icon.resize((25, 25), Image.Resampling.LANCZOS)\nback_icon = ImageTk.PhotoImage(back_icon)\nforward_icon = Image.open(script_dir / 'assets/play-forward-outline.png').convert('RGBA')\nforward_icon = forward_icon.resize((25, 25), Image.Resampling.LANCZOS)\nforward_icon = ImageTk.PhotoImage(forward_icon)\nopen_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\ndef open_file(event = None):",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "back_icon",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "back_icon = back_icon.resize((25, 25), Image.Resampling.LANCZOS)\nback_icon = ImageTk.PhotoImage(back_icon)\nforward_icon = Image.open(script_dir / 'assets/play-forward-outline.png').convert('RGBA')\nforward_icon = forward_icon.resize((25, 25), Image.Resampling.LANCZOS)\nforward_icon = ImageTk.PhotoImage(forward_icon)\nopen_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "back_icon",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "back_icon = ImageTk.PhotoImage(back_icon)\nforward_icon = Image.open(script_dir / 'assets/play-forward-outline.png').convert('RGBA')\nforward_icon = forward_icon.resize((25, 25), Image.Resampling.LANCZOS)\nforward_icon = ImageTk.PhotoImage(forward_icon)\nopen_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]\n    file_name = tk.filedialog.askopenfilename(title = \"Open\", filetypes = file_type)",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "forward_icon",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "forward_icon = Image.open(script_dir / 'assets/play-forward-outline.png').convert('RGBA')\nforward_icon = forward_icon.resize((25, 25), Image.Resampling.LANCZOS)\nforward_icon = ImageTk.PhotoImage(forward_icon)\nopen_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]\n    file_name = tk.filedialog.askopenfilename(title = \"Open\", filetypes = file_type)\n    global current_file_path ",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "forward_icon",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "forward_icon = forward_icon.resize((25, 25), Image.Resampling.LANCZOS)\nforward_icon = ImageTk.PhotoImage(forward_icon)\nopen_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]\n    file_name = tk.filedialog.askopenfilename(title = \"Open\", filetypes = file_type)\n    global current_file_path \n    current_file_path = file_name",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "forward_icon",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "forward_icon = ImageTk.PhotoImage(forward_icon)\nopen_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]\n    file_name = tk.filedialog.askopenfilename(title = \"Open\", filetypes = file_type)\n    global current_file_path \n    current_file_path = file_name\n    print(current_file_path)",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "open_icon",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "open_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]\n    file_name = tk.filedialog.askopenfilename(title = \"Open\", filetypes = file_type)\n    global current_file_path \n    current_file_path = file_name\n    print(current_file_path)\n    if len(file_name) < 1 :",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "open_icon",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "open_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]\n    file_name = tk.filedialog.askopenfilename(title = \"Open\", filetypes = file_type)\n    global current_file_path \n    current_file_path = file_name\n    print(current_file_path)\n    if len(file_name) < 1 :\n        tk.messagebox.showwarning(title = \"Ooops\",message = \"Please choose another file\")",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "open_icon",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "open_icon = ImageTk.PhotoImage(open_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]\n    file_name = tk.filedialog.askopenfilename(title = \"Open\", filetypes = file_type)\n    global current_file_path \n    current_file_path = file_name\n    print(current_file_path)\n    if len(file_name) < 1 :\n        tk.messagebox.showwarning(title = \"Ooops\",message = \"Please choose another file\")\n    text_area.delete(1.0, \"end\")",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "menubar",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "menubar = tk.Menu(win)\nfileMenu = tk.Menu(menubar, tearoff=0)\nfileMenu.add_command(label=\"New\", command=new_file)\nfileMenu.add_command(label=\"Open\", command=open_file)\nfileMenu.add_separator()\nfileMenu.add_command(label=\"Quit\", command=win.quit)\nmenubar.add_cascade(label=\"File\", menu=fileMenu)\nhelpMenu = tk.Menu(menubar, tearoff=0)\nhelpMenu.add_command(label=\"About\", command=alert)\nmenubar.add_cascade(label=\"Help\", menu=helpMenu)",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "fileMenu",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "fileMenu = tk.Menu(menubar, tearoff=0)\nfileMenu.add_command(label=\"New\", command=new_file)\nfileMenu.add_command(label=\"Open\", command=open_file)\nfileMenu.add_separator()\nfileMenu.add_command(label=\"Quit\", command=win.quit)\nmenubar.add_cascade(label=\"File\", menu=fileMenu)\nhelpMenu = tk.Menu(menubar, tearoff=0)\nhelpMenu.add_command(label=\"About\", command=alert)\nmenubar.add_cascade(label=\"Help\", menu=helpMenu)\nmenuFrame = tk.Frame(win, bg=\"#D9D9D9\", height=40, highlightthickness=5, highlightbackground=\"#D9D9D9\", highlightcolor=\"#D9D9D9\")",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "helpMenu",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "helpMenu = tk.Menu(menubar, tearoff=0)\nhelpMenu.add_command(label=\"About\", command=alert)\nmenubar.add_cascade(label=\"Help\", menu=helpMenu)\nmenuFrame = tk.Frame(win, bg=\"#D9D9D9\", height=40, highlightthickness=5, highlightbackground=\"#D9D9D9\", highlightcolor=\"#D9D9D9\")\nmenuFrame.pack(side=\"top\", fill=\"x\")\nnew_btn = tk.Label(menuFrame, image=new_icon, bg=\"#D9D9D9\")\nnew_btn.pack(side=\"left\", padx=5, pady=2)\nnew_btn.bind(\"<Button-1>\",new_file)\nnew_btn.bind(\"<Control-KeyPress-N>\",new_file)\nsave_btn = tk.Label(menuFrame, image=save_icon, bg=\"#D9D9D9\")",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "menuFrame",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "menuFrame = tk.Frame(win, bg=\"#D9D9D9\", height=40, highlightthickness=5, highlightbackground=\"#D9D9D9\", highlightcolor=\"#D9D9D9\")\nmenuFrame.pack(side=\"top\", fill=\"x\")\nnew_btn = tk.Label(menuFrame, image=new_icon, bg=\"#D9D9D9\")\nnew_btn.pack(side=\"left\", padx=5, pady=2)\nnew_btn.bind(\"<Button-1>\",new_file)\nnew_btn.bind(\"<Control-KeyPress-N>\",new_file)\nsave_btn = tk.Label(menuFrame, image=save_icon, bg=\"#D9D9D9\")\nsave_btn.pack(side=\"left\", padx=5, pady=2)\nsave_btn.bind(\"<Button-1>\", save)\nopen_btn = tk.Label(menuFrame, image=open_icon, bg=\"#D9D9D9\")",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "new_btn",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "new_btn = tk.Label(menuFrame, image=new_icon, bg=\"#D9D9D9\")\nnew_btn.pack(side=\"left\", padx=5, pady=2)\nnew_btn.bind(\"<Button-1>\",new_file)\nnew_btn.bind(\"<Control-KeyPress-N>\",new_file)\nsave_btn = tk.Label(menuFrame, image=save_icon, bg=\"#D9D9D9\")\nsave_btn.pack(side=\"left\", padx=5, pady=2)\nsave_btn.bind(\"<Button-1>\", save)\nopen_btn = tk.Label(menuFrame, image=open_icon, bg=\"#D9D9D9\")\nopen_btn.pack(side=\"left\", padx=5, pady=2)\nopen_btn.bind(\"<Button-1>\", open_file)",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "save_btn",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "save_btn = tk.Label(menuFrame, image=save_icon, bg=\"#D9D9D9\")\nsave_btn.pack(side=\"left\", padx=5, pady=2)\nsave_btn.bind(\"<Button-1>\", save)\nopen_btn = tk.Label(menuFrame, image=open_icon, bg=\"#D9D9D9\")\nopen_btn.pack(side=\"left\", padx=5, pady=2)\nopen_btn.bind(\"<Button-1>\", open_file)\nback_btn = tk.Label(menuFrame, image=back_icon, bg=\"#D9D9D9\")\nback_btn.pack(side=\"left\", padx=5, pady=2)\nback_btn.bind(\"<Button-1>\", lambda e: alert())\nforward_btn = tk.Label(menuFrame, image=forward_icon, bg=\"#D9D9D9\")",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "open_btn",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "open_btn = tk.Label(menuFrame, image=open_icon, bg=\"#D9D9D9\")\nopen_btn.pack(side=\"left\", padx=5, pady=2)\nopen_btn.bind(\"<Button-1>\", open_file)\nback_btn = tk.Label(menuFrame, image=back_icon, bg=\"#D9D9D9\")\nback_btn.pack(side=\"left\", padx=5, pady=2)\nback_btn.bind(\"<Button-1>\", lambda e: alert())\nforward_btn = tk.Label(menuFrame, image=forward_icon, bg=\"#D9D9D9\")\nforward_btn.pack(side=\"left\", padx=5, pady=2)\nforward_btn.bind(\"<Button-1>\", lambda e: alert())\nmainFrame = tk.Frame(win, bg=\"#D9D9D9\")",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "back_btn",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "back_btn = tk.Label(menuFrame, image=back_icon, bg=\"#D9D9D9\")\nback_btn.pack(side=\"left\", padx=5, pady=2)\nback_btn.bind(\"<Button-1>\", lambda e: alert())\nforward_btn = tk.Label(menuFrame, image=forward_icon, bg=\"#D9D9D9\")\nforward_btn.pack(side=\"left\", padx=5, pady=2)\nforward_btn.bind(\"<Button-1>\", lambda e: alert())\nmainFrame = tk.Frame(win, bg=\"#D9D9D9\")\nmainFrame.pack(fill = \"both\", expand=True)\ntext_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "forward_btn",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "forward_btn = tk.Label(menuFrame, image=forward_icon, bg=\"#D9D9D9\")\nforward_btn.pack(side=\"left\", padx=5, pady=2)\nforward_btn.bind(\"<Button-1>\", lambda e: alert())\nmainFrame = tk.Frame(win, bg=\"#D9D9D9\")\nmainFrame.pack(fill = \"both\", expand=True)\ntext_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",\n                                            12))\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=0)\nwin.config(menu=menubar)",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "mainFrame",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "mainFrame = tk.Frame(win, bg=\"#D9D9D9\")\nmainFrame.pack(fill = \"both\", expand=True)\ntext_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",\n                                            12))\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=0)\nwin.config(menu=menubar)\nwin.mainloop()",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "mainFrame.pack(fill",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "mainFrame.pack(fill = \"both\", expand=True)\ntext_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",\n                                            12))\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=0)\nwin.config(menu=menubar)\nwin.mainloop()",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "text_area",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "text_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",\n                                            12))\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=0)\nwin.config(menu=menubar)\nwin.mainloop()",
+        "detail": "tkinter.main",
         "documentation": {}
     }
 ]

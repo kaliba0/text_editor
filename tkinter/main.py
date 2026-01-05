@@ -35,6 +35,10 @@ open_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('R
 open_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)
 open_icon = ImageTk.PhotoImage(open_icon)
 
+separator_icon = Image.open(script_dir / 'assets/line.png').convert('RGBA')
+separator_icon = separator_icon.resize((25, 25), Image.Resampling.LANCZOS)
+separator_icon = ImageTk.PhotoImage(separator_icon)
+
 
 
 
@@ -70,6 +74,11 @@ def save(event = None):
 
     messagebox.showinfo(title="Your file have been saved", message=current_file_path, icon='info')
 
+def back(event = None) :
+    text_area.edit_undo()
+
+def forward(event = None) :
+    text_area.edit_redo()
 
 def alert():
     messagebox.showinfo('Alert', 'bouton')
@@ -105,20 +114,24 @@ open_btn = tk.Label(menuFrame, image=open_icon, bg="#D9D9D9")
 open_btn.pack(side="left", padx=5, pady=2)
 open_btn.bind("<Button-1>", open_file)
 
+separator = tk.Label(menuFrame, image=separator_icon, bg="#D9D9D9")
+separator.pack(side="left", padx=2, pady=2)
+
+
 back_btn = tk.Label(menuFrame, image=back_icon, bg="#D9D9D9")
 back_btn.pack(side="left", padx=5, pady=2)
-back_btn.bind("<Button-1>", lambda e: alert())
+back_btn.bind("<Button-1>", lambda e: back)
 
 forward_btn = tk.Label(menuFrame, image=forward_icon, bg="#D9D9D9")
 forward_btn.pack(side="left", padx=5, pady=2)
-forward_btn.bind("<Button-1>", lambda e: alert())
+forward_btn.bind("<Button-1>", forward)
 
 mainFrame = tk.Frame(win, bg="#D9D9D9")
 mainFrame.pack(fill = "both", expand=True)
 
 text_area = tk.scrolledtext.ScrolledText(mainFrame,
                                       font=("Times New Roman",
-                                            12))
+                                            12), autoseparator=True)
 text_area.pack(fill="both", expand = True, padx=5, pady=0)
 win.config(menu=menubar)
 

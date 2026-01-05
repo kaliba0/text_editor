@@ -322,7 +322,7 @@
         "kind": 5,
         "importPath": "term.undo_redo",
         "description": "term.undo_redo",
-        "peekOfCode": "\t\tself.valeurs = []\n\tdef empiler(self, valeur):\n\t\tself.valeurs.append(valeur)\n\tdef depiler(self):\n\t\tif self.valeurs:\n\t\t\treturn self.valeurs.pop()\n\tdef estVide(self):\n\t\treturn self.valeurs == []",
+        "peekOfCode": "\t\tself.valeurs = []\n\tdef empiler(self, valeur):\n\t\tself.valeurs.append(valeur)\n\tdef depiler(self):\n\t\tif self.valeurs:\n\t\t\treturn self.valeurs.pop()\n\tdef estVide(self):\n\t\treturn self.valeurs == []\n\"\"\" \ntoutes les 5 secondes, enregistrer le texte ",
         "detail": "term.undo_redo",
         "documentation": {}
     },
@@ -394,7 +394,25 @@
         "kind": 2,
         "importPath": "tkinter.main",
         "description": "tkinter.main",
-        "peekOfCode": "def save(event = None):\n    current_txt = text_area.get(1.0, \"end\")\n    with open(current_file_path, \"w\") as file :\n        file.write(current_txt)\n    messagebox.showinfo(title=\"Your file have been saved\", message=current_file_path, icon='info')\ndef alert():\n    messagebox.showinfo('Alert', 'bouton')\nmenubar = tk.Menu(win)\nfileMenu = tk.Menu(menubar, tearoff=0)\nfileMenu.add_command(label=\"New\", command=new_file)",
+        "peekOfCode": "def save(event = None):\n    current_txt = text_area.get(1.0, \"end\")\n    with open(current_file_path, \"w\") as file :\n        file.write(current_txt)\n    messagebox.showinfo(title=\"Your file have been saved\", message=current_file_path, icon='info')\ndef back(event = None) :\n    text_area.edit_undo()\ndef forward(event = None) :\n    text_area.edit_redo()\ndef alert():",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "back",
+        "kind": 2,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "def back(event = None) :\n    text_area.edit_undo()\ndef forward(event = None) :\n    text_area.edit_redo()\ndef alert():\n    messagebox.showinfo('Alert', 'bouton')\nmenubar = tk.Menu(win)\nfileMenu = tk.Menu(menubar, tearoff=0)\nfileMenu.add_command(label=\"New\", command=new_file)\nfileMenu.add_command(label=\"Open\", command=open_file)",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "forward",
+        "kind": 2,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "def forward(event = None) :\n    text_area.edit_redo()\ndef alert():\n    messagebox.showinfo('Alert', 'bouton')\nmenubar = tk.Menu(win)\nfileMenu = tk.Menu(menubar, tearoff=0)\nfileMenu.add_command(label=\"New\", command=new_file)\nfileMenu.add_command(label=\"Open\", command=open_file)\nfileMenu.add_separator()\nfileMenu.add_command(label=\"Quit\", command=win.quit)",
         "detail": "tkinter.main",
         "documentation": {}
     },
@@ -493,7 +511,7 @@
         "kind": 5,
         "importPath": "tkinter.main",
         "description": "tkinter.main",
-        "peekOfCode": "back_icon = Image.open(script_dir / 'assets/play-back-outline.png').convert('RGBA')\nback_icon = back_icon.resize((25, 25), Image.Resampling.LANCZOS)\nback_icon = ImageTk.PhotoImage(back_icon)\nforward_icon = Image.open(script_dir / 'assets/play-forward-outline.png').convert('RGBA')\nforward_icon = forward_icon.resize((25, 25), Image.Resampling.LANCZOS)\nforward_icon = ImageTk.PhotoImage(forward_icon)\nopen_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\ndef open_file(event = None):",
+        "peekOfCode": "back_icon = Image.open(script_dir / 'assets/play-back-outline.png').convert('RGBA')\nback_icon = back_icon.resize((25, 25), Image.Resampling.LANCZOS)\nback_icon = ImageTk.PhotoImage(back_icon)\nforward_icon = Image.open(script_dir / 'assets/play-forward-outline.png').convert('RGBA')\nforward_icon = forward_icon.resize((25, 25), Image.Resampling.LANCZOS)\nforward_icon = ImageTk.PhotoImage(forward_icon)\nopen_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\nseparator_icon = Image.open(script_dir / 'assets/line.png').convert('RGBA')",
         "detail": "tkinter.main",
         "documentation": {}
     },
@@ -502,7 +520,7 @@
         "kind": 5,
         "importPath": "tkinter.main",
         "description": "tkinter.main",
-        "peekOfCode": "back_icon = back_icon.resize((25, 25), Image.Resampling.LANCZOS)\nback_icon = ImageTk.PhotoImage(back_icon)\nforward_icon = Image.open(script_dir / 'assets/play-forward-outline.png').convert('RGBA')\nforward_icon = forward_icon.resize((25, 25), Image.Resampling.LANCZOS)\nforward_icon = ImageTk.PhotoImage(forward_icon)\nopen_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]",
+        "peekOfCode": "back_icon = back_icon.resize((25, 25), Image.Resampling.LANCZOS)\nback_icon = ImageTk.PhotoImage(back_icon)\nforward_icon = Image.open(script_dir / 'assets/play-forward-outline.png').convert('RGBA')\nforward_icon = forward_icon.resize((25, 25), Image.Resampling.LANCZOS)\nforward_icon = ImageTk.PhotoImage(forward_icon)\nopen_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\nseparator_icon = Image.open(script_dir / 'assets/line.png').convert('RGBA')\nseparator_icon = separator_icon.resize((25, 25), Image.Resampling.LANCZOS)",
         "detail": "tkinter.main",
         "documentation": {}
     },
@@ -511,7 +529,7 @@
         "kind": 5,
         "importPath": "tkinter.main",
         "description": "tkinter.main",
-        "peekOfCode": "back_icon = ImageTk.PhotoImage(back_icon)\nforward_icon = Image.open(script_dir / 'assets/play-forward-outline.png').convert('RGBA')\nforward_icon = forward_icon.resize((25, 25), Image.Resampling.LANCZOS)\nforward_icon = ImageTk.PhotoImage(forward_icon)\nopen_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]\n    file_name = tk.filedialog.askopenfilename(title = \"Open\", filetypes = file_type)",
+        "peekOfCode": "back_icon = ImageTk.PhotoImage(back_icon)\nforward_icon = Image.open(script_dir / 'assets/play-forward-outline.png').convert('RGBA')\nforward_icon = forward_icon.resize((25, 25), Image.Resampling.LANCZOS)\nforward_icon = ImageTk.PhotoImage(forward_icon)\nopen_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\nseparator_icon = Image.open(script_dir / 'assets/line.png').convert('RGBA')\nseparator_icon = separator_icon.resize((25, 25), Image.Resampling.LANCZOS)\nseparator_icon = ImageTk.PhotoImage(separator_icon)",
         "detail": "tkinter.main",
         "documentation": {}
     },
@@ -520,7 +538,7 @@
         "kind": 5,
         "importPath": "tkinter.main",
         "description": "tkinter.main",
-        "peekOfCode": "forward_icon = Image.open(script_dir / 'assets/play-forward-outline.png').convert('RGBA')\nforward_icon = forward_icon.resize((25, 25), Image.Resampling.LANCZOS)\nforward_icon = ImageTk.PhotoImage(forward_icon)\nopen_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]\n    file_name = tk.filedialog.askopenfilename(title = \"Open\", filetypes = file_type)\n    global current_file_path ",
+        "peekOfCode": "forward_icon = Image.open(script_dir / 'assets/play-forward-outline.png').convert('RGBA')\nforward_icon = forward_icon.resize((25, 25), Image.Resampling.LANCZOS)\nforward_icon = ImageTk.PhotoImage(forward_icon)\nopen_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\nseparator_icon = Image.open(script_dir / 'assets/line.png').convert('RGBA')\nseparator_icon = separator_icon.resize((25, 25), Image.Resampling.LANCZOS)\nseparator_icon = ImageTk.PhotoImage(separator_icon)\ndef open_file(event = None):",
         "detail": "tkinter.main",
         "documentation": {}
     },
@@ -529,7 +547,7 @@
         "kind": 5,
         "importPath": "tkinter.main",
         "description": "tkinter.main",
-        "peekOfCode": "forward_icon = forward_icon.resize((25, 25), Image.Resampling.LANCZOS)\nforward_icon = ImageTk.PhotoImage(forward_icon)\nopen_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]\n    file_name = tk.filedialog.askopenfilename(title = \"Open\", filetypes = file_type)\n    global current_file_path \n    current_file_path = file_name",
+        "peekOfCode": "forward_icon = forward_icon.resize((25, 25), Image.Resampling.LANCZOS)\nforward_icon = ImageTk.PhotoImage(forward_icon)\nopen_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\nseparator_icon = Image.open(script_dir / 'assets/line.png').convert('RGBA')\nseparator_icon = separator_icon.resize((25, 25), Image.Resampling.LANCZOS)\nseparator_icon = ImageTk.PhotoImage(separator_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]",
         "detail": "tkinter.main",
         "documentation": {}
     },
@@ -538,7 +556,7 @@
         "kind": 5,
         "importPath": "tkinter.main",
         "description": "tkinter.main",
-        "peekOfCode": "forward_icon = ImageTk.PhotoImage(forward_icon)\nopen_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]\n    file_name = tk.filedialog.askopenfilename(title = \"Open\", filetypes = file_type)\n    global current_file_path \n    current_file_path = file_name\n    print(current_file_path)",
+        "peekOfCode": "forward_icon = ImageTk.PhotoImage(forward_icon)\nopen_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\nseparator_icon = Image.open(script_dir / 'assets/line.png').convert('RGBA')\nseparator_icon = separator_icon.resize((25, 25), Image.Resampling.LANCZOS)\nseparator_icon = ImageTk.PhotoImage(separator_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]\n    file_name = tk.filedialog.askopenfilename(title = \"Open\", filetypes = file_type)",
         "detail": "tkinter.main",
         "documentation": {}
     },
@@ -547,7 +565,7 @@
         "kind": 5,
         "importPath": "tkinter.main",
         "description": "tkinter.main",
-        "peekOfCode": "open_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]\n    file_name = tk.filedialog.askopenfilename(title = \"Open\", filetypes = file_type)\n    global current_file_path \n    current_file_path = file_name\n    print(current_file_path)\n    if len(file_name) < 1 :",
+        "peekOfCode": "open_icon = Image.open(script_dir / 'assets/folder-open-outline.png').convert('RGBA')\nopen_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\nseparator_icon = Image.open(script_dir / 'assets/line.png').convert('RGBA')\nseparator_icon = separator_icon.resize((25, 25), Image.Resampling.LANCZOS)\nseparator_icon = ImageTk.PhotoImage(separator_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]\n    file_name = tk.filedialog.askopenfilename(title = \"Open\", filetypes = file_type)\n    global current_file_path ",
         "detail": "tkinter.main",
         "documentation": {}
     },
@@ -556,7 +574,7 @@
         "kind": 5,
         "importPath": "tkinter.main",
         "description": "tkinter.main",
-        "peekOfCode": "open_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]\n    file_name = tk.filedialog.askopenfilename(title = \"Open\", filetypes = file_type)\n    global current_file_path \n    current_file_path = file_name\n    print(current_file_path)\n    if len(file_name) < 1 :\n        tk.messagebox.showwarning(title = \"Ooops\",message = \"Please choose another file\")",
+        "peekOfCode": "open_icon = open_icon.resize((25, 25), Image.Resampling.LANCZOS)\nopen_icon = ImageTk.PhotoImage(open_icon)\nseparator_icon = Image.open(script_dir / 'assets/line.png').convert('RGBA')\nseparator_icon = separator_icon.resize((25, 25), Image.Resampling.LANCZOS)\nseparator_icon = ImageTk.PhotoImage(separator_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]\n    file_name = tk.filedialog.askopenfilename(title = \"Open\", filetypes = file_type)\n    global current_file_path \n    current_file_path = file_name",
         "detail": "tkinter.main",
         "documentation": {}
     },
@@ -565,7 +583,34 @@
         "kind": 5,
         "importPath": "tkinter.main",
         "description": "tkinter.main",
-        "peekOfCode": "open_icon = ImageTk.PhotoImage(open_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]\n    file_name = tk.filedialog.askopenfilename(title = \"Open\", filetypes = file_type)\n    global current_file_path \n    current_file_path = file_name\n    print(current_file_path)\n    if len(file_name) < 1 :\n        tk.messagebox.showwarning(title = \"Ooops\",message = \"Please choose another file\")\n    text_area.delete(1.0, \"end\")",
+        "peekOfCode": "open_icon = ImageTk.PhotoImage(open_icon)\nseparator_icon = Image.open(script_dir / 'assets/line.png').convert('RGBA')\nseparator_icon = separator_icon.resize((25, 25), Image.Resampling.LANCZOS)\nseparator_icon = ImageTk.PhotoImage(separator_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]\n    file_name = tk.filedialog.askopenfilename(title = \"Open\", filetypes = file_type)\n    global current_file_path \n    current_file_path = file_name\n    print(current_file_path)",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "separator_icon",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "separator_icon = Image.open(script_dir / 'assets/line.png').convert('RGBA')\nseparator_icon = separator_icon.resize((25, 25), Image.Resampling.LANCZOS)\nseparator_icon = ImageTk.PhotoImage(separator_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]\n    file_name = tk.filedialog.askopenfilename(title = \"Open\", filetypes = file_type)\n    global current_file_path \n    current_file_path = file_name\n    print(current_file_path)\n    if len(file_name) < 1 :",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "separator_icon",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "separator_icon = separator_icon.resize((25, 25), Image.Resampling.LANCZOS)\nseparator_icon = ImageTk.PhotoImage(separator_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]\n    file_name = tk.filedialog.askopenfilename(title = \"Open\", filetypes = file_type)\n    global current_file_path \n    current_file_path = file_name\n    print(current_file_path)\n    if len(file_name) < 1 :\n        tk.messagebox.showwarning(title = \"Ooops\",message = \"Please choose another file\")",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "separator_icon",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "separator_icon = ImageTk.PhotoImage(separator_icon)\ndef open_file(event = None):\n    file_type = [ ( \"texte\" , \".txt\" )]\n    file_name = tk.filedialog.askopenfilename(title = \"Open\", filetypes = file_type)\n    global current_file_path \n    current_file_path = file_name\n    print(current_file_path)\n    if len(file_name) < 1 :\n        tk.messagebox.showwarning(title = \"Ooops\",message = \"Please choose another file\")\n    text_area.delete(1.0, \"end\")",
         "detail": "tkinter.main",
         "documentation": {}
     },
@@ -619,7 +664,7 @@
         "kind": 5,
         "importPath": "tkinter.main",
         "description": "tkinter.main",
-        "peekOfCode": "save_btn = tk.Label(menuFrame, image=save_icon, bg=\"#D9D9D9\")\nsave_btn.pack(side=\"left\", padx=5, pady=2)\nsave_btn.bind(\"<Button-1>\", save)\nopen_btn = tk.Label(menuFrame, image=open_icon, bg=\"#D9D9D9\")\nopen_btn.pack(side=\"left\", padx=5, pady=2)\nopen_btn.bind(\"<Button-1>\", open_file)\nback_btn = tk.Label(menuFrame, image=back_icon, bg=\"#D9D9D9\")\nback_btn.pack(side=\"left\", padx=5, pady=2)\nback_btn.bind(\"<Button-1>\", lambda e: alert())\nforward_btn = tk.Label(menuFrame, image=forward_icon, bg=\"#D9D9D9\")",
+        "peekOfCode": "save_btn = tk.Label(menuFrame, image=save_icon, bg=\"#D9D9D9\")\nsave_btn.pack(side=\"left\", padx=5, pady=2)\nsave_btn.bind(\"<Button-1>\", save)\nopen_btn = tk.Label(menuFrame, image=open_icon, bg=\"#D9D9D9\")\nopen_btn.pack(side=\"left\", padx=5, pady=2)\nopen_btn.bind(\"<Button-1>\", open_file)\nseparator = tk.Label(menuFrame, image=separator_icon, bg=\"#D9D9D9\")\nseparator.pack(side=\"left\", padx=2, pady=2)\nback_btn = tk.Label(menuFrame, image=back_icon, bg=\"#D9D9D9\")\nback_btn.pack(side=\"left\", padx=5, pady=2)",
         "detail": "tkinter.main",
         "documentation": {}
     },
@@ -628,7 +673,16 @@
         "kind": 5,
         "importPath": "tkinter.main",
         "description": "tkinter.main",
-        "peekOfCode": "open_btn = tk.Label(menuFrame, image=open_icon, bg=\"#D9D9D9\")\nopen_btn.pack(side=\"left\", padx=5, pady=2)\nopen_btn.bind(\"<Button-1>\", open_file)\nback_btn = tk.Label(menuFrame, image=back_icon, bg=\"#D9D9D9\")\nback_btn.pack(side=\"left\", padx=5, pady=2)\nback_btn.bind(\"<Button-1>\", lambda e: alert())\nforward_btn = tk.Label(menuFrame, image=forward_icon, bg=\"#D9D9D9\")\nforward_btn.pack(side=\"left\", padx=5, pady=2)\nforward_btn.bind(\"<Button-1>\", lambda e: alert())\nmainFrame = tk.Frame(win, bg=\"#D9D9D9\")",
+        "peekOfCode": "open_btn = tk.Label(menuFrame, image=open_icon, bg=\"#D9D9D9\")\nopen_btn.pack(side=\"left\", padx=5, pady=2)\nopen_btn.bind(\"<Button-1>\", open_file)\nseparator = tk.Label(menuFrame, image=separator_icon, bg=\"#D9D9D9\")\nseparator.pack(side=\"left\", padx=2, pady=2)\nback_btn = tk.Label(menuFrame, image=back_icon, bg=\"#D9D9D9\")\nback_btn.pack(side=\"left\", padx=5, pady=2)\nback_btn.bind(\"<Button-1>\", lambda e: back)\nforward_btn = tk.Label(menuFrame, image=forward_icon, bg=\"#D9D9D9\")\nforward_btn.pack(side=\"left\", padx=5, pady=2)",
+        "detail": "tkinter.main",
+        "documentation": {}
+    },
+    {
+        "label": "separator",
+        "kind": 5,
+        "importPath": "tkinter.main",
+        "description": "tkinter.main",
+        "peekOfCode": "separator = tk.Label(menuFrame, image=separator_icon, bg=\"#D9D9D9\")\nseparator.pack(side=\"left\", padx=2, pady=2)\nback_btn = tk.Label(menuFrame, image=back_icon, bg=\"#D9D9D9\")\nback_btn.pack(side=\"left\", padx=5, pady=2)\nback_btn.bind(\"<Button-1>\", lambda e: back)\nforward_btn = tk.Label(menuFrame, image=forward_icon, bg=\"#D9D9D9\")\nforward_btn.pack(side=\"left\", padx=5, pady=2)\nforward_btn.bind(\"<Button-1>\", forward)\nmainFrame = tk.Frame(win, bg=\"#D9D9D9\")\nmainFrame.pack(fill = \"both\", expand=True)",
         "detail": "tkinter.main",
         "documentation": {}
     },
@@ -637,7 +691,7 @@
         "kind": 5,
         "importPath": "tkinter.main",
         "description": "tkinter.main",
-        "peekOfCode": "back_btn = tk.Label(menuFrame, image=back_icon, bg=\"#D9D9D9\")\nback_btn.pack(side=\"left\", padx=5, pady=2)\nback_btn.bind(\"<Button-1>\", lambda e: alert())\nforward_btn = tk.Label(menuFrame, image=forward_icon, bg=\"#D9D9D9\")\nforward_btn.pack(side=\"left\", padx=5, pady=2)\nforward_btn.bind(\"<Button-1>\", lambda e: alert())\nmainFrame = tk.Frame(win, bg=\"#D9D9D9\")\nmainFrame.pack(fill = \"both\", expand=True)\ntext_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",",
+        "peekOfCode": "back_btn = tk.Label(menuFrame, image=back_icon, bg=\"#D9D9D9\")\nback_btn.pack(side=\"left\", padx=5, pady=2)\nback_btn.bind(\"<Button-1>\", lambda e: back)\nforward_btn = tk.Label(menuFrame, image=forward_icon, bg=\"#D9D9D9\")\nforward_btn.pack(side=\"left\", padx=5, pady=2)\nforward_btn.bind(\"<Button-1>\", forward)\nmainFrame = tk.Frame(win, bg=\"#D9D9D9\")\nmainFrame.pack(fill = \"both\", expand=True)\ntext_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",",
         "detail": "tkinter.main",
         "documentation": {}
     },
@@ -646,7 +700,7 @@
         "kind": 5,
         "importPath": "tkinter.main",
         "description": "tkinter.main",
-        "peekOfCode": "forward_btn = tk.Label(menuFrame, image=forward_icon, bg=\"#D9D9D9\")\nforward_btn.pack(side=\"left\", padx=5, pady=2)\nforward_btn.bind(\"<Button-1>\", lambda e: alert())\nmainFrame = tk.Frame(win, bg=\"#D9D9D9\")\nmainFrame.pack(fill = \"both\", expand=True)\ntext_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",\n                                            12))\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=0)\nwin.config(menu=menubar)",
+        "peekOfCode": "forward_btn = tk.Label(menuFrame, image=forward_icon, bg=\"#D9D9D9\")\nforward_btn.pack(side=\"left\", padx=5, pady=2)\nforward_btn.bind(\"<Button-1>\", forward)\nmainFrame = tk.Frame(win, bg=\"#D9D9D9\")\nmainFrame.pack(fill = \"both\", expand=True)\ntext_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",\n                                            12), autoseparator=True)\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=0)\nwin.config(menu=menubar)",
         "detail": "tkinter.main",
         "documentation": {}
     },
@@ -655,7 +709,7 @@
         "kind": 5,
         "importPath": "tkinter.main",
         "description": "tkinter.main",
-        "peekOfCode": "mainFrame = tk.Frame(win, bg=\"#D9D9D9\")\nmainFrame.pack(fill = \"both\", expand=True)\ntext_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",\n                                            12))\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=0)\nwin.config(menu=menubar)\nwin.mainloop()",
+        "peekOfCode": "mainFrame = tk.Frame(win, bg=\"#D9D9D9\")\nmainFrame.pack(fill = \"both\", expand=True)\ntext_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",\n                                            12), autoseparator=True)\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=0)\nwin.config(menu=menubar)\nwin.mainloop()",
         "detail": "tkinter.main",
         "documentation": {}
     },
@@ -664,7 +718,7 @@
         "kind": 5,
         "importPath": "tkinter.main",
         "description": "tkinter.main",
-        "peekOfCode": "mainFrame.pack(fill = \"both\", expand=True)\ntext_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",\n                                            12))\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=0)\nwin.config(menu=menubar)\nwin.mainloop()",
+        "peekOfCode": "mainFrame.pack(fill = \"both\", expand=True)\ntext_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",\n                                            12), autoseparator=True)\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=0)\nwin.config(menu=menubar)\nwin.mainloop()",
         "detail": "tkinter.main",
         "documentation": {}
     },
@@ -673,7 +727,7 @@
         "kind": 5,
         "importPath": "tkinter.main",
         "description": "tkinter.main",
-        "peekOfCode": "text_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",\n                                            12))\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=0)\nwin.config(menu=menubar)\nwin.mainloop()",
+        "peekOfCode": "text_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",\n                                            12), autoseparator=True)\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=0)\nwin.config(menu=menubar)\nwin.mainloop()",
         "detail": "tkinter.main",
         "documentation": {}
     }

@@ -15,4 +15,6 @@ class Pile:
 
 
 
-    
+""" 
+toutes les 5 secondes, enregistrer le texte 
+"""

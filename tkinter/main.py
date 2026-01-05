@@ -54,6 +54,7 @@ def open_file(event = None):
     text_area.delete(1.0, "end")
     with open(file_name) as file :
         text_area.insert("end", file.read())
+        text_area.configure(state="normal")
 
 
 def new_file(event = None):
@@ -62,6 +63,7 @@ def new_file(event = None):
     current_file_path = file_name
     if file_name == None :
         tk.messagebox.showwarning(title = "Ooops",message = "Try again")
+    text_area.configure(state="normal")
 
     open(file_name, "x")
     print(current_file_path)
@@ -131,7 +133,7 @@ mainFrame.pack(fill = "both", expand=True)
 
 text_area = tk.scrolledtext.ScrolledText(mainFrame,
                                       font=("Times New Roman",
-                                            12), undo=True, )
+                                            12), undo=True, state="disabled")
 
 text_area.pack(fill="both", expand = True, padx=5, pady=0)
 win.config(menu=menubar)

@@ -700,7 +700,7 @@
         "kind": 5,
         "importPath": "tkinter.main",
         "description": "tkinter.main",
-        "peekOfCode": "forward_btn = tk.Label(menuFrame, image=forward_icon, bg=\"#D9D9D9\")\nforward_btn.pack(side=\"left\", padx=5, pady=2)\nforward_btn.bind(\"<Button-1>\", forward)\nmainFrame = tk.Frame(win, bg=\"#D9D9D9\")\nmainFrame.pack(fill = \"both\", expand=True)\ntext_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",\n                                            12), autoseparator=True)\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=0)\nwin.config(menu=menubar)",
+        "peekOfCode": "forward_btn = tk.Label(menuFrame, image=forward_icon, bg=\"#D9D9D9\")\nforward_btn.pack(side=\"left\", padx=5, pady=2)\nforward_btn.bind(\"<Button-1>\", forward)\nmainFrame = tk.Frame(win, bg=\"#D9D9D9\")\nmainFrame.pack(fill = \"both\", expand=True)\ntext_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",\n                                            12), undo=True, )\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=0)\nwin.config(menu=menubar)",
         "detail": "tkinter.main",
         "documentation": {}
     },
@@ -709,7 +709,7 @@
         "kind": 5,
         "importPath": "tkinter.main",
         "description": "tkinter.main",
-        "peekOfCode": "mainFrame = tk.Frame(win, bg=\"#D9D9D9\")\nmainFrame.pack(fill = \"both\", expand=True)\ntext_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",\n                                            12), autoseparator=True)\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=0)\nwin.config(menu=menubar)\nwin.mainloop()",
+        "peekOfCode": "mainFrame = tk.Frame(win, bg=\"#D9D9D9\")\nmainFrame.pack(fill = \"both\", expand=True)\ntext_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",\n                                            12), undo=True, )\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=0)\nwin.config(menu=menubar)\nwin.mainloop()",
         "detail": "tkinter.main",
         "documentation": {}
     },
@@ -718,7 +718,7 @@
         "kind": 5,
         "importPath": "tkinter.main",
         "description": "tkinter.main",
-        "peekOfCode": "mainFrame.pack(fill = \"both\", expand=True)\ntext_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",\n                                            12), autoseparator=True)\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=0)\nwin.config(menu=menubar)\nwin.mainloop()",
+        "peekOfCode": "mainFrame.pack(fill = \"both\", expand=True)\ntext_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",\n                                            12), undo=True, )\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=0)\nwin.config(menu=menubar)\nwin.mainloop()",
         "detail": "tkinter.main",
         "documentation": {}
     },
@@ -727,7 +727,7 @@
         "kind": 5,
         "importPath": "tkinter.main",
         "description": "tkinter.main",
-        "peekOfCode": "text_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",\n                                            12), autoseparator=True)\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=0)\nwin.config(menu=menubar)\nwin.mainloop()",
+        "peekOfCode": "text_area = tk.scrolledtext.ScrolledText(mainFrame,\n                                      font=(\"Times New Roman\",\n                                            12), undo=True, )\ntext_area.pack(fill=\"both\", expand = True, padx=5, pady=0)\nwin.config(menu=menubar)\nwin.mainloop()",
         "detail": "tkinter.main",
         "documentation": {}
     }

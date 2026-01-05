@@ -131,7 +131,8 @@ mainFrame.pack(fill = "both", expand=True)
 
 text_area = tk.scrolledtext.ScrolledText(mainFrame,
                                       font=("Times New Roman",
-                                            12), autoseparator=True)
+                                            12), undo=True, )
+
 text_area.pack(fill="both", expand = True, padx=5, pady=0)
 win.config(menu=menubar)
 

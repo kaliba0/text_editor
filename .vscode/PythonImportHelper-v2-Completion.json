@@ -1,50 +1,11 @@
 [
     {
-        "label": "Colors",
-        "importPath": "utilities",
-        "description": "utilities",
+        "label": "time",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "utilities",
-        "documentation": {}
-    },
-    {
-        "label": "clear_screen",
-        "importPath": "utilities",
-        "description": "utilities",
-        "isExtraImport": true,
-        "detail": "utilities",
-        "documentation": {}
-    },
-    {
-        "label": "coltxt",
-        "importPath": "utilities",
-        "description": "utilities",
-        "isExtraImport": true,
-        "detail": "utilities",
-        "documentation": {}
-    },
-    {
-        "label": "Colors",
-        "importPath": "utilities",
-        "description": "utilities",
-        "isExtraImport": true,
-        "detail": "utilities",
-        "documentation": {}
-    },
-    {
-        "label": "coltxt",
-        "importPath": "utilities",
-        "description": "utilities",
-        "isExtraImport": true,
-        "detail": "utilities",
-        "documentation": {}
-    },
-    {
-        "label": "input_placeholder",
-        "importPath": "utilities",
-        "description": "utilities",
-        "isExtraImport": true,
-        "detail": "utilities",
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
         "documentation": {}
     },
     {
@@ -88,7 +49,39 @@
         "documentation": {}
     },
     {
-        "label": "input_placeholder",
+        "label": "Colors",
+        "importPath": "utilities",
+        "description": "utilities",
+        "isExtraImport": true,
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "clear_screen",
+        "importPath": "utilities",
+        "description": "utilities",
+        "isExtraImport": true,
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "coltxt",
+        "importPath": "utilities",
+        "description": "utilities",
+        "isExtraImport": true,
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "Colors",
+        "importPath": "utilities",
+        "description": "utilities",
+        "isExtraImport": true,
+        "detail": "utilities",
+        "documentation": {}
+    },
+    {
+        "label": "coltxt",
         "importPath": "utilities",
         "description": "utilities",
         "isExtraImport": true,
@@ -104,28 +97,19 @@
         "documentation": {}
     },
     {
-        "label": "Document",
-        "importPath": "prompt_toolkit.document",
-        "description": "prompt_toolkit.document",
+        "label": "UndoManager",
+        "importPath": "undo_redo",
+        "description": "undo_redo",
         "isExtraImport": true,
-        "detail": "prompt_toolkit.document",
+        "detail": "undo_redo",
         "documentation": {}
     },
     {
-        "label": "KeyBindings",
-        "importPath": "prompt_toolkit.key_binding",
-        "description": "prompt_toolkit.key_binding",
+        "label": "get_editor_bindings",
+        "importPath": "kb_manager",
+        "description": "kb_manager",
         "isExtraImport": true,
-        "detail": "prompt_toolkit.key_binding",
-        "documentation": {}
-    },
-    {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
+        "detail": "kb_manager",
         "documentation": {}
     },
     {
@@ -143,6 +127,23 @@
         "description": "pathlib",
         "isExtraImport": true,
         "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "KeyBindings",
+        "importPath": "prompt_toolkit.key_binding",
+        "description": "prompt_toolkit.key_binding",
+        "isExtraImport": true,
+        "detail": "prompt_toolkit.key_binding",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
         "documentation": {}
     },
     {
@@ -232,8 +233,17 @@
         "kind": 2,
         "importPath": "term.editor",
         "description": "term.editor",
-        "peekOfCode": "def editor(txtfile: str):\n    clear_screen()\n    path = f\"files/{txtfile}.txt\"\n    try:\n        with open(path, 'r', encoding='utf-8') as f:\n            initial_text = f.read()\n    except FileNotFoundError:\n        initial_text = \"\"\n    print(coltxt(f\"Editing {txtfile}.txt (Ctrl+T = commands, Ctrl+Q = save and quit)\\n\",\n                 Colors.grey))",
+        "peekOfCode": "def editor(txtfile: str):\n    clear_screen()\n    term_dir = pathlib.Path(__file__).resolve().parent\n    project_dir = term_dir.parent\n    files_dir = project_dir / \"files\"\n    path = f\"{files_dir}/{txtfile}.txt\"\n    try:\n        with open(path, \"r\", encoding=\"utf-8\") as f:\n            initial_text = f.read()\n    except FileNotFoundError:",
         "detail": "term.editor",
+        "documentation": {}
+    },
+    {
+        "label": "get_editor_bindings",
+        "kind": 2,
+        "importPath": "term.kb_manager",
+        "description": "term.kb_manager",
+        "peekOfCode": "def get_editor_bindings(on_quit, on_undo, on_redo):\n    kb = KeyBindings()\n    @kb.add(\"c-q\")\n    def _(event):\n        on_quit(event)\n    @kb.add(\"c-z\")\n    def _(event):\n        on_undo(event)\n    @kb.add(\"c-r\")\n    def _(event):",
+        "detail": "term.kb_manager",
         "documentation": {}
     },
     {
@@ -241,7 +251,7 @@
         "kind": 2,
         "importPath": "term.load_file",
         "description": "term.load_file",
-        "peekOfCode": "def load_file():\n    p = pathlib.Path('../files')\n    liste_fichier = os.listdir(p)\n    n = 0\n    options = []\n    for i in range(len(liste_fichier)) :\n        n += 1\n        options.append(n)\n        print(f\"\\t {n}.{liste_fichier[i]}\")\n    reponse = \"\"",
+        "peekOfCode": "def load_file():\n    liste_fichier = os.listdir(files_dir)\n    n = 0\n    options = []\n    for i in range(len(liste_fichier)) :\n        n += 1\n        options.append(n)\n        print(f\"\\t {n}.{liste_fichier[i]}\")\n    reponse = \"\"\n    while not validite_entree(reponse, options) :",
         "detail": "term.load_file",
         "documentation": {}
     },
@@ -250,7 +260,34 @@
         "kind": 2,
         "importPath": "term.load_file",
         "description": "term.load_file",
-        "peekOfCode": "def validite_entree(reponse, options) :\n    critere = True\n    if reponse == \"\" :\n        return False\n    try :\n        reponse = int(reponse)\n    except :\n        print(coltxt('INCORRECT OPTION CHOOSEN. ', Colors.red_bold) + coltxt('Choose a number.', Colors.red))\n        critere = False\n    else :",
+        "peekOfCode": "def validite_entree(reponse, options) :\n    critere = True\n    if reponse == \"\" :\n        return False\n    try :\n        reponse = int(reponse)\n    except :\n        print(coltxt('INCORRECT OPTION CHOSEN. ', Colors.red_bold) + coltxt('Choose a number.', Colors.red))\n        critere = False\n    else :",
+        "detail": "term.load_file",
+        "documentation": {}
+    },
+    {
+        "label": "term_dir",
+        "kind": 5,
+        "importPath": "term.load_file",
+        "description": "term.load_file",
+        "peekOfCode": "term_dir = pathlib.Path(__file__).resolve().parent\nproject_dir = term_dir.parent\nfiles_dir = project_dir / \"files\"\ndef load_file():\n    liste_fichier = os.listdir(files_dir)\n    n = 0\n    options = []\n    for i in range(len(liste_fichier)) :\n        n += 1\n        options.append(n)",
+        "detail": "term.load_file",
+        "documentation": {}
+    },
+    {
+        "label": "project_dir",
+        "kind": 5,
+        "importPath": "term.load_file",
+        "description": "term.load_file",
+        "peekOfCode": "project_dir = term_dir.parent\nfiles_dir = project_dir / \"files\"\ndef load_file():\n    liste_fichier = os.listdir(files_dir)\n    n = 0\n    options = []\n    for i in range(len(liste_fichier)) :\n        n += 1\n        options.append(n)\n        print(f\"\\t {n}.{liste_fichier[i]}\")",
+        "detail": "term.load_file",
+        "documentation": {}
+    },
+    {
+        "label": "files_dir",
+        "kind": 5,
+        "importPath": "term.load_file",
+        "description": "term.load_file",
+        "peekOfCode": "files_dir = project_dir / \"files\"\ndef load_file():\n    liste_fichier = os.listdir(files_dir)\n    n = 0\n    options = []\n    for i in range(len(liste_fichier)) :\n        n += 1\n        options.append(n)\n        print(f\"\\t {n}.{liste_fichier[i]}\")\n    reponse = \"\"",
         "detail": "term.load_file",
         "documentation": {}
     },
@@ -259,7 +296,7 @@
         "kind": 2,
         "importPath": "term.main",
         "description": "term.main",
-        "peekOfCode": "def show_menu():\n    banner =  coltxt(\"\"\"\\n\\n\nTTTTT X   X TTTTT EEEEE DDDD  III TTTTT  OOO  RRRR  \n  T    X X    T   E     D   D  I    T   O   O R   R \n  T     X     T   EEEE  D   D  I    T   O   O RRRR  \n  T    X X    T   E     D   D  I    T   O   O R  R  \n  T   X   X   T   EEEEE DDDD  III   T    OOO  R   R \n                                                    \"\"\", Colors.bold)\n    menu = \"\\n\\nSelect one of the option below: \\n\\t1.Create new file\\n\\t2.Load a file\\n\"                                                                         \n    print(banner)",
+        "peekOfCode": "def show_menu():\n    banner =  coltxt(\"\"\"\\n\\n\nTTTTT X   X TTTTT EEEEE DDDD  III TTTTT  OOO  RRRR  \n  T    X X    T   E     D   D  I    T   O   O R   R \n  T     X     T   EEEE  D   D  I    T   O   O RRRR  \n  T    X X    T   E     D   D  I    T   O   O R  R  \n  T   X   X   T   EEEEE DDDD  III   T    OOO  R   R \n                                                    \"\"\", Colors.bold)\n    menu = \"\\n\\nSelect one of the option below: \\n\\t1.Create new file\\n\\t2.Load a file\\n\"\n    print(banner)",
         "detail": "term.main",
         "documentation": {}
     },
@@ -268,7 +305,16 @@
         "kind": 2,
         "importPath": "term.main",
         "description": "term.main",
-        "peekOfCode": "def menu_input():\n    try:\n        option = input(coltxt('txteditor >>> ', Colors.bold))\n    except (KeyboardInterrupt, EOFError):\n        print()\n        sys.exit(0)\n    if option not in ['1', '2']:\n        print(coltxt('INCORRECT OPTION CHOOSEN. ', Colors.red_bold) + coltxt('Choose 1 or 2.', Colors.red))\n        menu_input()\n    if option == '1':",
+        "peekOfCode": "def menu_input():\n    option = input(coltxt('txteditor >>> ', Colors.bold))\n    if option not in ['1', '2']:\n        print(coltxt('INCORRECT OPTION CHOOSEN. ', Colors.red_bold) + coltxt('Choose 1 or 2.', Colors.red))\n        return menu_input()\n    if option == '1':\n        while editor(new_file()) != 'back':\n            pass\n    if option =='2':\n        while editor(load_file()) != 'back':",
+        "detail": "term.main",
+        "documentation": {}
+    },
+    {
+        "label": "menu",
+        "kind": 2,
+        "importPath": "term.main",
+        "description": "term.main",
+        "peekOfCode": "def menu():\n    show_menu()\n    menu_input()\ndef main():\n    clear_screen()\n    menu()\nif __name__==\"__main__\":\n    main()",
         "detail": "term.main",
         "documentation": {}
     },
@@ -277,7 +323,7 @@
         "kind": 2,
         "importPath": "term.main",
         "description": "term.main",
-        "peekOfCode": "def main():\n    clear_screen()\n    show_menu()\n    menu_input()\nif __name__==\"__main__\":\n    main()",
+        "peekOfCode": "def main():\n    clear_screen()\n    menu()\nif __name__==\"__main__\":\n    main()",
         "detail": "term.main",
         "documentation": {}
     },
@@ -295,7 +341,7 @@
         "kind": 5,
         "importPath": "term.main",
         "description": "term.main",
-        "peekOfCode": "BOLD = '\\033[1m'\ndef show_menu():\n    banner =  coltxt(\"\"\"\\n\\n\nTTTTT X   X TTTTT EEEEE DDDD  III TTTTT  OOO  RRRR  \n  T    X X    T   E     D   D  I    T   O   O R   R \n  T     X     T   EEEE  D   D  I    T   O   O RRRR  \n  T    X X    T   E     D   D  I    T   O   O R  R  \n  T   X   X   T   EEEEE DDDD  III   T    OOO  R   R \n                                                    \"\"\", Colors.bold)\n    menu = \"\\n\\nSelect one of the option below: \\n\\t1.Create new file\\n\\t2.Load a file\\n\"                                                                         ",
+        "peekOfCode": "BOLD = '\\033[1m'\ndef show_menu():\n    banner =  coltxt(\"\"\"\\n\\n\nTTTTT X   X TTTTT EEEEE DDDD  III TTTTT  OOO  RRRR  \n  T    X X    T   E     D   D  I    T   O   O R   R \n  T     X     T   EEEE  D   D  I    T   O   O RRRR  \n  T    X X    T   E     D   D  I    T   O   O R  R  \n  T   X   X   T   EEEEE DDDD  III   T    OOO  R   R \n                                                    \"\"\", Colors.bold)\n    menu = \"\\n\\nSelect one of the option below: \\n\\t1.Create new file\\n\\t2.Load a file\\n\"",
         "detail": "term.main",
         "documentation": {}
     },
@@ -304,25 +350,43 @@
         "kind": 2,
         "importPath": "term.new_file",
         "description": "term.new_file",
-        "peekOfCode": "def new_file():\n    name = input(coltxt('txteditor/newfile ', Colors.bold)+ coltxt('(name your new file) ') + coltxt('>>> ', Colors.bold))\n    while True:\n        if name==\"\":\n            name = input(coltxt('txteditor/newfile ', Colors.bold)+ coltxt('(name your new file) ') + coltxt('>>> ', Colors.bold))\n        else :\n            break\n    dir_list = os.listdir(\"../files\")\n    if f\"{name}.txt\" in dir_list:\n        opt = input(coltxt('Existing file with this name found. Overwrite ? ', Colors.red_bold) + coltxt('(y/n) ', Colors.red))",
+        "peekOfCode": "def new_file():\n    name = input(coltxt('txteditor/newfile ', Colors.bold)+ coltxt('(name your new file) ', Colors.grey) + coltxt('>>> ', Colors.bold))\n    while True:\n        if name==\"\":\n            name = input(coltxt('txteditor/newfile ', Colors.bold)+ coltxt('(name your new file) ', Colors.grey) + coltxt('>>> ', Colors.bold))\n        else :\n            break\n    dir_list = os.listdir(files_dir)\n    if f\"{name}.txt\" in dir_list:\n        opt = input(coltxt('Existing file with this name found. Overwrite ? ', Colors.red_bold) + coltxt('(y/n) ', Colors.red))",
         "detail": "term.new_file",
         "documentation": {}
     },
     {
-        "label": "Pile",
-        "kind": 6,
-        "importPath": "term.undo_redo",
-        "description": "term.undo_redo",
-        "peekOfCode": "class Pile:\n\tdef __init__(self):\n\t\tself.valeurs = []\n\tdef empiler(self, valeur):\n\t\tself.valeurs.append(valeur)\n\tdef depiler(self):\n\t\tif self.valeurs:\n\t\t\treturn self.valeurs.pop()\n\tdef estVide(self):\n\t\treturn self.valeurs == []",
-        "detail": "term.undo_redo",
+        "label": "term_dir",
+        "kind": 5,
+        "importPath": "term.new_file",
+        "description": "term.new_file",
+        "peekOfCode": "term_dir = pathlib.Path(__file__).resolve().parent\nproject_dir = term_dir.parent\nfiles_dir = project_dir / \"files\"\ndef new_file():\n    name = input(coltxt('txteditor/newfile ', Colors.bold)+ coltxt('(name your new file) ', Colors.grey) + coltxt('>>> ', Colors.bold))\n    while True:\n        if name==\"\":\n            name = input(coltxt('txteditor/newfile ', Colors.bold)+ coltxt('(name your new file) ', Colors.grey) + coltxt('>>> ', Colors.bold))\n        else :\n            break",
+        "detail": "term.new_file",
         "documentation": {}
     },
     {
-        "label": "\t\tself.valeurs",
+        "label": "project_dir",
         "kind": 5,
+        "importPath": "term.new_file",
+        "description": "term.new_file",
+        "peekOfCode": "project_dir = term_dir.parent\nfiles_dir = project_dir / \"files\"\ndef new_file():\n    name = input(coltxt('txteditor/newfile ', Colors.bold)+ coltxt('(name your new file) ', Colors.grey) + coltxt('>>> ', Colors.bold))\n    while True:\n        if name==\"\":\n            name = input(coltxt('txteditor/newfile ', Colors.bold)+ coltxt('(name your new file) ', Colors.grey) + coltxt('>>> ', Colors.bold))\n        else :\n            break\n    dir_list = os.listdir(files_dir)",
+        "detail": "term.new_file",
+        "documentation": {}
+    },
+    {
+        "label": "files_dir",
+        "kind": 5,
+        "importPath": "term.new_file",
+        "description": "term.new_file",
+        "peekOfCode": "files_dir = project_dir / \"files\"\ndef new_file():\n    name = input(coltxt('txteditor/newfile ', Colors.bold)+ coltxt('(name your new file) ', Colors.grey) + coltxt('>>> ', Colors.bold))\n    while True:\n        if name==\"\":\n            name = input(coltxt('txteditor/newfile ', Colors.bold)+ coltxt('(name your new file) ', Colors.grey) + coltxt('>>> ', Colors.bold))\n        else :\n            break\n    dir_list = os.listdir(files_dir)\n    if f\"{name}.txt\" in dir_list:",
+        "detail": "term.new_file",
+        "documentation": {}
+    },
+    {
+        "label": "UndoManager",
+        "kind": 6,
         "importPath": "term.undo_redo",
         "description": "term.undo_redo",
-        "peekOfCode": "\t\tself.valeurs = []\n\tdef empiler(self, valeur):\n\t\tself.valeurs.append(valeur)\n\tdef depiler(self):\n\t\tif self.valeurs:\n\t\t\treturn self.valeurs.pop()\n\tdef estVide(self):\n\t\treturn self.valeurs == []\n\"\"\" \ntoutes les 5 secondes, enregistrer le texte ",
+        "peekOfCode": "class UndoManager:\n    def __init__(self, initial_state: str = \"\"):\n        self.undo_stack = [initial_state]\n        self.redo_stack = []\n    def push_state(self, state: str):\n        if self.undo_stack and state == self.undo_stack[-1]:\n            return\n        self.undo_stack.append(state)\n        self.redo_stack = []\n    def can_undo(self) -> bool:",
         "detail": "term.undo_redo",
         "documentation": {}
     },
@@ -331,7 +395,7 @@
         "kind": 6,
         "importPath": "term.utilities",
         "description": "term.utilities",
-        "peekOfCode": "class Colors:\n    bold = '\\033[1m'\n    reset= '\\033[0m'\n    red= '\\033[0;31m'\n    red_bold = '\\033[1;31m'\n    grey=\"\\033[38;2;160;160;160m\"\ndef clear_screen():\n    os.system('cls' if os.name == 'nt' else 'clear')\nclass ColoredTxt:\n    def __init__(self, text, color=Colors.reset):",
+        "peekOfCode": "class Colors:\n    bold = '\\033[1m'\n    reset= '\\033[0m'\n    red= '\\033[0;31m'\n    red_bold = '\\033[1;31m'\n    grey=\"\\033[38;2;160;160;160m\"\n    grey_bold=\"\\033[1;38;2;160;160;160m\"\ndef clear_screen():\n    os.system('cls' if os.name == 'nt' else 'clear')\nclass ColoredTxt:",
         "detail": "term.utilities",
         "documentation": {}
     },
@@ -340,7 +404,7 @@
         "kind": 6,
         "importPath": "term.utilities",
         "description": "term.utilities",
-        "peekOfCode": "class ColoredTxt:\n    def __init__(self, text, color=Colors.reset):\n        self.content = color + text + Colors.reset\n    def __str__(self):\n        return self.content\ndef coltxt(txt, col= Colors.reset):\n    return col + txt + Colors.reset\ndef input_placeholder(txt: str, placeholder: str):\n    raise NotImplementedError",
+        "peekOfCode": "class ColoredTxt:\n    def __init__(self, text, color=Colors.reset):\n        self.content = color + text + Colors.reset\n    def __str__(self):\n        return self.content\ndef coltxt(txt, col= Colors.reset):\n    return col + txt + Colors.reset",
         "detail": "term.utilities",
         "documentation": {}
     },
@@ -349,7 +413,7 @@
         "kind": 2,
         "importPath": "term.utilities",
         "description": "term.utilities",
-        "peekOfCode": "def clear_screen():\n    os.system('cls' if os.name == 'nt' else 'clear')\nclass ColoredTxt:\n    def __init__(self, text, color=Colors.reset):\n        self.content = color + text + Colors.reset\n    def __str__(self):\n        return self.content\ndef coltxt(txt, col= Colors.reset):\n    return col + txt + Colors.reset\ndef input_placeholder(txt: str, placeholder: str):",
+        "peekOfCode": "def clear_screen():\n    os.system('cls' if os.name == 'nt' else 'clear')\nclass ColoredTxt:\n    def __init__(self, text, color=Colors.reset):\n        self.content = color + text + Colors.reset\n    def __str__(self):\n        return self.content\ndef coltxt(txt, col= Colors.reset):\n    return col + txt + Colors.reset",
         "detail": "term.utilities",
         "documentation": {}
     },
@@ -358,16 +422,7 @@
         "kind": 2,
         "importPath": "term.utilities",
         "description": "term.utilities",
-        "peekOfCode": "def coltxt(txt, col= Colors.reset):\n    return col + txt + Colors.reset\ndef input_placeholder(txt: str, placeholder: str):\n    raise NotImplementedError",
-        "detail": "term.utilities",
-        "documentation": {}
-    },
-    {
-        "label": "input_placeholder",
-        "kind": 2,
-        "importPath": "term.utilities",
-        "description": "term.utilities",
-        "peekOfCode": "def input_placeholder(txt: str, placeholder: str):\n    raise NotImplementedError",
+        "peekOfCode": "def coltxt(txt, col= Colors.reset):\n    return col + txt + Colors.reset",
         "detail": "term.utilities",
         "documentation": {}
     },

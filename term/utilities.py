@@ -6,6 +6,7 @@ class Colors:
     red= '\033[0;31m'
     red_bold = '\033[1;31m'
     grey="\033[38;2;160;160;160m"
+    grey_bold="\033[1;38;2;160;160;160m"
 
 
 def clear_screen():
@@ -21,6 +22,3 @@ class ColoredTxt:
 
 def coltxt(txt, col= Colors.reset):
     return col + txt + Colors.reset
-
-def input_placeholder(txt: str, placeholder: str):
-    raise NotImplementedError

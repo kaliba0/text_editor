@@ -1,53 +1,83 @@
+import time
 from utilities import Colors, clear_screen, coltxt
 from prompt_toolkit import PromptSession
-from prompt_toolkit.document import Document
-from prompt_toolkit.key_binding import KeyBindings
+from undo_redo import UndoManager
+from kb_manager import get_editor_bindings
+import pathlib
 
 def editor(txtfile: str):
     clear_screen()
-    path = f"files/{txtfile}.txt"
+    term_dir = pathlib.Path(__file__).resolve().parent
+    project_dir = term_dir.parent
+    files_dir = project_dir / "files"
+    path = f"{files_dir}/{txtfile}.txt"
 
     try:
-        with open(path, 'r', encoding='utf-8') as f:
+        with open(path, "r", encoding="utf-8") as f:
             initial_text = f.read()
     except FileNotFoundError:
         initial_text = ""
 
-    print(coltxt(f"Editing {txtfile}.txt (Ctrl+T = commands, Ctrl+Q = save and quit)\n",
-                 Colors.grey))
+    print(f"{coltxt(f'{txtfile}.txt', Colors.grey_bold)} {coltxt("(Ctrl+Q save and quit | Ctrl+Z undo | Ctrl+R redo)\n", Colors.grey)}")
 
-    kb = KeyBindings()
-    command_last = {"value": None} 
+    session = PromptSession()
+    history = UndoManager(initial_text)
 
-    @kb.add('c-c')
-    def _(event):
-        event.app.exit(result=event.app.current_buffer.text)
+    last_push_time = {"t": time.time()}
+    pending_state = {"text": initial_text}
 
-    @kb.add('c-t')
-    def _(event):
-        from prompt_toolkit.shortcuts import input_dialog
+    def maybe_push_state(force: bool = False):
+        now = time.time()
+        if force or (now - last_push_time["t"] >= 0.4):
+            history.push_state(pending_state["text"])
+            last_push_time["t"] = now
 
-        cmd = input_dialog(
-            title="Command mode",
-            text="Tape ta commande :"
-        ).run()
+    def on_quit(event):
+        buf = event.app.current_buffer
+        pending_state["text"] = buf.text
+        maybe_push_state(force=True)
 
-        if cmd is not None:
-            command_last["value"] = cmd
-            print(coltxt(f"\n[Commande reçue] {cmd}\n", Colors.grey))
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(buf.text)
 
-    session = PromptSession(key_bindings=kb)
+        event.app.exit(result="__QUIT__")
 
+    def on_undo(event):
+        buf = event.app.current_buffer
+        pending_state["text"] = buf.text
+        maybe_push_state(force=True)
 
-    text = session.prompt(
+        new_text = history.undo()
+        buf.text = new_text
+        buf.cursor_position = len(new_text)
+
+    def on_redo(event):
+        buf = event.app.current_buffer
+        new_text = history.redo()
+        buf.text = new_text
+        buf.cursor_position = len(new_text)
+
+    kb = get_editor_bindings(on_quit, on_undo, on_redo)
+
+    def pre_run():
+        buf = session.app.current_buffer
+
+        def on_text_changed(_):
+            pending_state["text"] = buf.text
+            maybe_push_state(force=False)
+
+        buf.on_text_changed += on_text_changed
+
+    result = session.prompt(
         default=initial_text,
         multiline=True,
+        key_bindings=kb,
+        pre_run=pre_run
     )
 
-    with open(path, 'w', encoding='utf-8') as f:
-        f.write(text)
+    if result == "__QUIT__":
+        return "back"
 
-    clear_screen()
-    print(coltxt(f"{txtfile}.txt saved.", Colors.grey))
-    if command_last["value"]:
-        print(coltxt(f"Dernière commande saisie : {command_last['value']}", Colors.grey))
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(pending_state["text"])
+    return "back"

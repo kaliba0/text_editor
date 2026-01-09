@@ -1,28 +1,18 @@
-from pynput import keyboard
-pressed_keys = set()
+from prompt_toolkit.key_binding import KeyBindings
 
-def on_press(key):
-    pressed_keys.add(key)
+def get_editor_bindings(on_quit, on_undo, on_redo):
+    kb = KeyBindings()
 
-    # Ctrl gauche ou droit + q
-    if (
-        (keyboard.Key.ctrl_l in pressed_keys or keyboard.Key.ctrl_r in pressed_keys)
-        and hasattr(key, 'char')
-        and key.char == 'q'
-    ):
-        return False
-    # elif (
-    #     (keyboard.Key.ctrl_l in pressed_keys or keyboard.Key.ctrl_r in pressed_keys)
-    #     and hasattr(key, 'char')
-    #     and key.char == 'w'
-    # ):
+    @kb.add("c-q")
+    def _(event):
+        on_quit(event)
 
+    @kb.add("c-z")
+    def _(event):
+        on_undo(event)
 
-def on_release(key):
-    pressed_keys.discard(key)
+    @kb.add("c-r")
+    def _(event):
+        on_redo(event)
 
-def start_kb_listening():
-    listener = keyboard.Listener(
-        on_press=on_press,
-        on_release=on_release)
-    listener.start()
+    return kb
